@@ -1,0 +1,822 @@
+Server is idle at 0.00000
+job 1: arrive at = 0.06565, length = 0.73167
+A new job comes. Server waken up and works now at 0.06565
+Job name: Job 1, arrTime 0.06565 and remaining duration 0.73167
+job 2: arrive at = 0.13046, length = 0.98928
+job 3: arrive at = 0.19512, length = 0.45660
+job 4: arrive at = 0.25911, length = 0.79828
+Job name: Job 2, arrTime 0.13046 and remaining duration 0.98928
+job 5: arrive at = 0.32256, length = 1.91747
+job 6: arrive at = 0.38609, length = 0.48481
+job 7: arrive at = 0.44971, length = 1.10430
+Job name: Job 3, arrTime 0.19512 and remaining duration 0.45660
+job 8: arrive at = 0.51420, length = 1.42279
+job 9: arrive at = 0.57916, length = 1.08186
+job 10: arrive at = 0.64443, length = 0.28480
+Job name: Job 4, arrTime 0.25911 and remaining duration 0.79828
+job 11: arrive at = 0.70721, length = 0.39950
+job 12: arrive at = 0.77300, length = 1.95419
+job 13: arrive at = 0.83754, length = 0.44979
+Job name: Job 1, arrTime 0.26565 and remaining duration 0.53167
+job 14: arrive at = 0.90158, length = 0.51486
+job 15: arrive at = 0.96802, length = 1.68501
+job 16: arrive at = 1.03284, length = 1.29612
+Job name: Job 5, arrTime 0.32256 and remaining duration 1.91747
+job 17: arrive at = 1.09525, length = 1.54108
+job 18: arrive at = 1.16029, length = 1.25441
+job 19: arrive at = 1.22540, length = 1.05784
+Job name: Job 6, arrTime 0.38609 and remaining duration 0.48481
+job 20: arrive at = 1.28778, length = 0.34943
+job 21: arrive at = 1.35305, length = 1.10581
+job 22: arrive at = 1.41923, length = 0.62739
+Job name: Job 7, arrTime 0.44971 and remaining duration 1.10430
+job 23: arrive at = 1.48399, length = 1.62640
+job 24: arrive at = 1.55045, length = 0.69997
+job 25: arrive at = 1.61328, length = 0.50654
+Job name: Job 2, arrTime 0.46565 and remaining duration 0.78928
+job 26: arrive at = 1.67995, length = 0.44500
+job 27: arrive at = 1.74331, length = 1.27245
+job 28: arrive at = 1.80844, length = 1.47395
+Job name: Job 8, arrTime 0.51420 and remaining duration 1.42279
+job 29: arrive at = 1.87492, length = 0.33975
+job 30: arrive at = 1.94019, length = 0.47160
+job 31: arrive at = 2.00329, length = 0.71238
+Job name: Job 9, arrTime 0.57916 and remaining duration 1.08186
+job 32: arrive at = 2.06740, length = 1.12530
+job 33: arrive at = 2.13100, length = 0.27569
+job 34: arrive at = 2.19677, length = 1.81666
+job 35: arrive at = 2.26235, length = 0.78710
+Job name: Job 10, arrTime 0.64443 and remaining duration 0.28480
+job 36: arrive at = 2.32860, length = 0.58229
+job 37: arrive at = 2.39347, length = 0.34607
+job 38: arrive at = 2.45885, length = 0.34588
+Job name: Job 3, arrTime 0.66565 and remaining duration 0.25660
+job 39: arrive at = 2.52313, length = 0.46437
+job 40: arrive at = 2.58977, length = 1.75446
+job 41: arrive at = 2.65264, length = 0.30014
+Job name: Job 11, arrTime 0.70721 and remaining duration 0.39950
+job 42: arrive at = 2.71812, length = 0.61745
+job 43: arrive at = 2.78246, length = 0.32039
+job 44: arrive at = 2.84691, length = 1.91409
+Job name: Job 12, arrTime 0.77300 and remaining duration 1.95419
+job 45: arrive at = 2.91258, length = 1.85337
+job 46: arrive at = 2.97896, length = 0.38007
+job 47: arrive at = 3.04487, length = 1.35241
+Job name: Job 13, arrTime 0.83754 and remaining duration 0.44979
+job 48: arrive at = 3.10785, length = 1.52634
+job 49: arrive at = 3.17228, length = 0.72322
+job 50: arrive at = 3.23782, length = 0.68959
+Job name: Job 4, arrTime 0.86565 and remaining duration 0.59828
+job 51: arrive at = 3.30439, length = 0.32679
+job 52: arrive at = 3.37072, length = 0.74207
+job 53: arrive at = 3.43396, length = 1.11141
+Job name: Job 14, arrTime 0.90158 and remaining duration 0.51486
+job 54: arrive at = 3.49914, length = 1.31864
+job 55: arrive at = 3.56338, length = 1.49633
+job 56: arrive at = 3.62980, length = 0.33715
+Job name: Job 15, arrTime 0.96802 and remaining duration 1.68501
+job 57: arrive at = 3.69509, length = 1.76919
+job 58: arrive at = 3.75901, length = 0.27506
+job 59: arrive at = 3.82289, length = 1.10693
+Job name: Job 16, arrTime 1.03284 and remaining duration 1.29612
+job 60: arrive at = 3.88712, length = 1.06295
+job 61: arrive at = 3.95264, length = 0.68038
+job 62: arrive at = 4.01725, length = 0.57338
+Job name: Job 1, arrTime 1.06565 and remaining duration 0.33167
+job 63: arrive at = 4.08027, length = 1.49593
+job 64: arrive at = 4.14595, length = 0.81606
+job 65: arrive at = 4.20837, length = 0.33240
+Job name: Job 17, arrTime 1.09525 and remaining duration 1.54108
+job 66: arrive at = 4.27429, length = 1.54730
+job 67: arrive at = 4.33910, length = 1.58444
+job 68: arrive at = 4.40167, length = 1.96457
+Job name: Job 18, arrTime 1.16029 and remaining duration 1.25441
+job 69: arrive at = 4.46567, length = 1.22228
+job 70: arrive at = 4.53176, length = 0.40922
+job 71: arrive at = 4.59840, length = 0.49176
+job 72: arrive at = 4.66171, length = 1.64024
+Job name: Job 19, arrTime 1.22540 and remaining duration 1.05784
+job 73: arrive at = 4.72699, length = 1.50678
+job 74: arrive at = 4.79309, length = 0.50388
+job 75: arrive at = 4.85809, length = 0.82575
+Job name: Job 5, arrTime 1.26565 and remaining duration 1.71747
+job 76: arrive at = 4.92176, length = 1.00561
+job 77: arrive at = 4.98728, length = 1.27439
+job 78: arrive at = 5.05364, length = 1.99181
+Job name: Job 20, arrTime 1.28778 and remaining duration 0.34943
+job 79: arrive at = 5.11984, length = 0.95434
+job 80: arrive at = 5.18352, length = 1.17809
+job 81: arrive at = 5.24779, length = 0.62735
+Job name: Job 21, arrTime 1.35305 and remaining duration 1.10581
+job 82: arrive at = 5.31436, length = 0.49761
+job 83: arrive at = 5.37924, length = 0.44430
+job 84: arrive at = 5.44326, length = 1.35919
+Job name: Job 22, arrTime 1.41923 and remaining duration 0.62739
+job 85: arrive at = 5.50595, length = 0.94271
+job 86: arrive at = 5.57020, length = 0.99047
+job 87: arrive at = 5.63512, length = 0.87176
+Job name: Job 6, arrTime 1.46565 and remaining duration 0.28481
+job 88: arrive at = 5.69931, length = 1.30335
+job 89: arrive at = 5.76505, length = 1.80530
+job 90: arrive at = 5.83042, length = 0.27272
+Job name: Job 23, arrTime 1.48399 and remaining duration 1.62640
+job 91: arrive at = 5.89465, length = 0.65059
+job 92: arrive at = 5.95847, length = 1.61381
+job 93: arrive at = 6.02317, length = 1.46488
+Job name: Job 24, arrTime 1.55045 and remaining duration 0.69997
+job 94: arrive at = 6.08717, length = 1.50420
+job 95: arrive at = 6.15293, length = 1.51147
+job 96: arrive at = 6.21715, length = 1.51595
+Job name: Job 25, arrTime 1.61328 and remaining duration 0.50654
+job 97: arrive at = 6.28283, length = 0.34738
+job 98: arrive at = 6.34897, length = 1.65433
+job 99: arrive at = 6.41144, length = 0.49048
+Job name: Job 7, arrTime 1.66565 and remaining duration 0.90430
+job 100: arrive at = 6.47682, length = 1.06811
+job 101: arrive at = 6.54110, length = 0.62649
+job 102: arrive at = 6.60601, length = 0.43359
+Job name: Job 26, arrTime 1.67995 and remaining duration 0.44500
+job 103: arrive at = 6.67009, length = 0.29555
+job 104: arrive at = 6.73300, length = 0.73261
+job 105: arrive at = 6.79724, length = 1.05447
+job 106: arrive at = 6.86381, length = 0.48340
+Job name: Job 27, arrTime 1.74331 and remaining duration 1.27245
+job 107: arrive at = 6.93010, length = 1.84152
+job 108: arrive at = 6.99669, length = 1.08016
+job 109: arrive at = 7.05942, length = 1.09884
+Job name: Job 28, arrTime 1.80844 and remaining duration 1.47395
+job 110: arrive at = 7.12541, length = 0.55988
+job 111: arrive at = 7.19177, length = 1.86490
+job 112: arrive at = 7.25719, length = 1.67217
+Job name: Job 2, arrTime 1.86565 and remaining duration 0.58928
+job 113: arrive at = 7.31995, length = 1.40865
+job 114: arrive at = 7.38598, length = 0.73880
+job 115: arrive at = 7.45058, length = 0.40655
+Job name: Job 29, arrTime 1.87492 and remaining duration 0.33975
+job 116: arrive at = 7.51485, length = 0.47939
+job 117: arrive at = 7.57898, length = 1.37272
+job 118: arrive at = 7.64310, length = 1.62226
+Job name: Job 30, arrTime 1.94019 and remaining duration 0.47160
+job 119: arrive at = 7.70961, length = 0.33511
+job 120: arrive at = 7.77321, length = 0.75902
+job 121: arrive at = 7.83650, length = 1.34698
+Job name: Job 31, arrTime 2.00329 and remaining duration 0.71238
+job 122: arrive at = 7.90262, length = 0.34159
+job 123: arrive at = 7.96871, length = 0.62830
+job 124: arrive at = 8.03247, length = 0.43560
+Job name: Job 8, arrTime 2.06565 and remaining duration 1.22279
+job 125: arrive at = 8.09709, length = 0.42972
+job 126: arrive at = 8.16185, length = 0.71293
+job 127: arrive at = 8.22821, length = 0.28070
+Job name: Job 32, arrTime 2.06740 and remaining duration 1.12530
+job 128: arrive at = 8.29401, length = 0.65173
+job 129: arrive at = 8.35670, length = 1.61781
+job 130: arrive at = 8.41913, length = 1.90864
+Job name: Job 33, arrTime 2.13100 and remaining duration 0.27569
+job 131: arrive at = 8.48252, length = 1.35666
+job 132: arrive at = 8.54562, length = 1.34814
+job 133: arrive at = 8.60815, length = 0.35650
+Job name: Job 34, arrTime 2.19677 and remaining duration 1.81666
+job 134: arrive at = 8.67420, length = 0.29187
+job 135: arrive at = 8.73824, length = 0.35936
+job 136: arrive at = 8.80397, length = 1.10627
+Job name: Job 35, arrTime 2.26235 and remaining duration 0.78710
+job 137: arrive at = 8.86983, length = 0.92319
+job 138: arrive at = 8.93520, length = 1.18180
+job 139: arrive at = 9.00089, length = 1.94360
+Job name: Job 9, arrTime 2.26565 and remaining duration 0.88186
+job 140: arrive at = 9.06719, length = 0.82581
+job 141: arrive at = 9.13373, length = 0.40785
+job 142: arrive at = 9.19891, length = 0.27097
+job 143: arrive at = 9.26287, length = 0.37192
+Job name: Job 36, arrTime 2.32860 and remaining duration 0.58229
+job 144: arrive at = 9.32847, length = 1.01915
+job 145: arrive at = 9.39105, length = 0.41160
+job 146: arrive at = 9.45477, length = 0.39739
+Job name: Job 37, arrTime 2.39347 and remaining duration 0.34607
+job 147: arrive at = 9.51903, length = 0.29722
+job 148: arrive at = 9.58415, length = 1.54361
+job 149: arrive at = 9.64857, length = 1.19768
+Job name: Job 38, arrTime 2.45885 and remaining duration 0.34588
+job 150: arrive at = 9.71459, length = 1.02613
+job 151: arrive at = 9.77831, length = 1.96717
+job 152: arrive at = 9.84251, length = 1.81659
+Job name: Job 10, arrTime 2.46565 and remaining duration 0.08480
+job 153: arrive at = 9.90630, length = 0.96585
+Job name: Job 39, arrTime 2.52313 and remaining duration 0.46437
+job 154: arrive at = 9.97038, length = 1.04871
+job 155: arrive at = 10.03376, length = 1.91088
+job 156: arrive at = 10.09662, length = 0.75295
+Job name: Job 40, arrTime 2.58977 and remaining duration 1.75446
+job 157: arrive at = 10.16002, length = 0.41860
+job 158: arrive at = 10.22536, length = 0.88979
+job 159: arrive at = 10.29200, length = 0.37150
+Job name: Job 41, arrTime 2.65264 and remaining duration 0.30014
+job 160: arrive at = 10.35697, length = 1.90731
+job 161: arrive at = 10.42221, length = 0.74608
+job 162: arrive at = 10.48607, length = 1.85366
+job 163: arrive at = 10.54983, length = 0.55672
+Job name: Job 3, arrTime 2.66565 and remaining duration 0.05660
+Job name: Job 42, arrTime 2.71812 and remaining duration 0.61745
+job 164: arrive at = 10.61557, length = 0.40249
+job 165: arrive at = 10.68132, length = 0.45548
+job 166: arrive at = 10.74508, length = 1.60178
+Job name: Job 43, arrTime 2.78246 and remaining duration 0.32039
+job 167: arrive at = 10.80775, length = 1.87177
+job 168: arrive at = 10.87369, length = 1.13434
+job 169: arrive at = 10.94033, length = 0.46473
+job 170: arrive at = 11.00549, length = 0.50157
+Job name: Job 44, arrTime 2.84691 and remaining duration 1.91409
+job 171: arrive at = 11.06949, length = 0.79022
+job 172: arrive at = 11.13327, length = 1.09147
+job 173: arrive at = 11.19759, length = 0.62680
+Job name: Job 11, arrTime 2.86565 and remaining duration 0.19950
+job 174: arrive at = 11.26277, length = 0.61271
+job 175: arrive at = 11.32859, length = 0.77619
+job 176: arrive at = 11.39334, length = 0.39746
+Job name: Job 45, arrTime 2.91258 and remaining duration 1.85337
+job 177: arrive at = 11.45602, length = 0.79478
+job 178: arrive at = 11.52198, length = 0.38259
+job 179: arrive at = 11.58512, length = 0.81449
+Job name: Job 46, arrTime 2.97896 and remaining duration 0.38007
+job 180: arrive at = 11.64984, length = 0.50163
+job 181: arrive at = 11.71497, length = 0.73630
+job 182: arrive at = 11.78161, length = 1.97390
+Job name: Job 47, arrTime 3.04487 and remaining duration 1.35241
+job 183: arrive at = 11.84799, length = 0.97914
+job 184: arrive at = 11.91273, length = 1.14692
+job 185: arrive at = 11.97850, length = 0.32636
+Job name: Job 12, arrTime 3.06565 and remaining duration 1.75419
+job 186: arrive at = 12.04277, length = 0.61459
+job 187: arrive at = 12.10917, length = 1.90668
+job 188: arrive at = 12.17263, length = 0.62700
+Job name: Job 48, arrTime 3.10785 and remaining duration 1.52634
+job 189: arrive at = 12.23705, length = 0.69507
+job 190: arrive at = 12.30304, length = 1.98136
+job 191: arrive at = 12.36713, length = 0.47320
+Job name: Job 49, arrTime 3.17228 and remaining duration 0.72322
+job 192: arrive at = 12.43159, length = 0.90676
+job 193: arrive at = 12.49680, length = 1.08768
+job 194: arrive at = 12.56171, length = 0.84177
+Job name: Job 50, arrTime 3.23782 and remaining duration 0.68959
+job 195: arrive at = 12.62446, length = 1.90961
+job 196: arrive at = 12.69044, length = 1.55164
+job 197: arrive at = 12.75622, length = 1.97509
+Job name: Job 13, arrTime 3.26565 and remaining duration 0.24979
+job 198: arrive at = 12.81924, length = 1.22910
+job 199: arrive at = 12.88242, length = 1.45221
+job 200: arrive at = 12.94483, length = 1.32701
+Job name: Job 51, arrTime 3.30439 and remaining duration 0.32679
+job 201: arrive at = 13.00837, length = 0.27221
+job 202: arrive at = 13.07431, length = 0.47548
+job 203: arrive at = 13.14008, length = 1.02916
+job 204: arrive at = 13.20377, length = 0.80290
+Job name: Job 52, arrTime 3.37072 and remaining duration 0.74207
+job 205: arrive at = 13.26761, length = 1.14549
+job 206: arrive at = 13.33349, length = 0.44300
+job 207: arrive at = 13.39732, length = 0.44771
+Job name: Job 53, arrTime 3.43396 and remaining duration 1.11141
+job 208: arrive at = 13.46195, length = 1.38875
+job 209: arrive at = 13.52624, length = 0.28668
+job 210: arrive at = 13.59285, length = 0.89330
+Job name: Job 4, arrTime 3.46565 and remaining duration 0.39828
+job 211: arrive at = 13.65774, length = 0.36477
+job 212: arrive at = 13.72096, length = 0.47294
+job 213: arrive at = 13.78700, length = 0.32762
+Job name: Job 54, arrTime 3.49914 and remaining duration 1.31864
+job 214: arrive at = 13.85221, length = 1.22932
+job 215: arrive at = 13.91462, length = 0.84842
+job 216: arrive at = 13.97714, length = 0.31353
+Job name: Job 55, arrTime 3.56338 and remaining duration 1.49633
+job 217: arrive at = 14.04373, length = 0.76004
+job 218: arrive at = 14.10896, length = 1.12316
+job 219: arrive at = 14.17329, length = 1.03298
+Job name: Job 56, arrTime 3.62980 and remaining duration 0.33715
+job 220: arrive at = 14.23742, length = 0.35352
+job 221: arrive at = 14.30054, length = 1.05242
+job 222: arrive at = 14.36417, length = 0.36366
+Job name: Job 14, arrTime 3.66565 and remaining duration 0.31486
+job 223: arrive at = 14.42818, length = 1.49916
+job 224: arrive at = 14.49176, length = 0.42385
+job 225: arrive at = 14.55422, length = 1.18162
+Job name: Job 57, arrTime 3.69509 and remaining duration 1.76919
+job 226: arrive at = 14.62044, length = 1.53508
+job 227: arrive at = 14.68501, length = 0.84625
+job 228: arrive at = 14.74894, length = 0.29634
+Job name: Job 58, arrTime 3.75901 and remaining duration 0.27506
+job 229: arrive at = 14.81427, length = 1.40770
+job 230: arrive at = 14.87942, length = 0.94046
+job 231: arrive at = 14.94579, length = 0.91997
+Job name: Job 59, arrTime 3.82289 and remaining duration 1.10693
+job 232: arrive at = 15.01228, length = 0.33787
+job 233: arrive at = 15.07832, length = 1.24368
+job 234: arrive at = 15.14437, length = 0.92469
+Job name: Job 15, arrTime 3.86565 and remaining duration 1.48501
+job 235: arrive at = 15.20692, length = 0.48573
+job 236: arrive at = 15.27027, length = 1.32321
+job 237: arrive at = 15.33595, length = 1.65031
+job 238: arrive at = 15.40136, length = 1.75499
+Job name: Job 60, arrTime 3.88712 and remaining duration 1.06295
+job 239: arrive at = 15.46477, length = 0.90746
+job 240: arrive at = 15.52861, length = 0.63838
+job 241: arrive at = 15.59520, length = 1.41070
+Job name: Job 61, arrTime 3.95264 and remaining duration 0.68038
+job 242: arrive at = 15.65996, length = 0.59071
+job 243: arrive at = 15.72269, length = 0.63447
+job 244: arrive at = 15.78821, length = 0.78111
+Job name: Job 62, arrTime 4.01725 and remaining duration 0.57338
+job 245: arrive at = 15.85075, length = 0.97069
+job 246: arrive at = 15.91661, length = 0.55833
+job 247: arrive at = 15.98124, length = 0.94991
+Job name: Job 16, arrTime 4.06565 and remaining duration 1.09612
+job 248: arrive at = 16.04766, length = 1.62466
+job 249: arrive at = 16.11223, length = 1.70835
+job 250: arrive at = 16.17803, length = 1.82866
+Job name: Job 63, arrTime 4.08027 and remaining duration 1.49593
+job 251: arrive at = 16.24413, length = 0.65319
+job 252: arrive at = 16.30960, length = 1.78219
+job 253: arrive at = 16.37448, length = 1.35086
+Job name: Job 64, arrTime 4.14595 and remaining duration 0.81606
+job 254: arrive at = 16.43707, length = 0.65361
+job 255: arrive at = 16.50049, length = 0.65466
+job 256: arrive at = 16.56363, length = 1.84314
+Job name: Job 65, arrTime 4.20837 and remaining duration 0.33240
+job 257: arrive at = 16.62983, length = 0.44305
+job 258: arrive at = 16.69405, length = 1.87761
+job 259: arrive at = 16.75831, length = 0.74195
+Job name: Job 1, arrTime 4.26565 and remaining duration 0.13167
+job 260: arrive at = 16.82405, length = 0.50774
+job 261: arrive at = 16.88755, length = 0.83131
+Job name: Job 66, arrTime 4.27429 and remaining duration 1.54730
+job 262: arrive at = 16.95102, length = 1.86629
+job 263: arrive at = 17.01552, length = 0.88312
+job 264: arrive at = 17.08044, length = 0.47278
+Job name: Job 67, arrTime 4.33910 and remaining duration 1.58444
+job 265: arrive at = 17.14699, length = 1.15870
+job 266: arrive at = 17.21214, length = 1.60295
+job 267: arrive at = 17.27764, length = 0.49984
+Job name: Job 68, arrTime 4.40167 and remaining duration 1.96457
+job 268: arrive at = 17.34185, length = 0.58963
+job 269: arrive at = 17.40730, length = 1.26719
+job 270: arrive at = 17.47369, length = 0.51148
+job 271: arrive at = 17.53809, length = 0.73846
+Job name: Job 17, arrTime 4.46565 and remaining duration 1.34108
+job 272: arrive at = 17.60353, length = 1.60185
+job 273: arrive at = 17.66900, length = 1.52268
+job 274: arrive at = 17.73388, length = 1.19505
+Job name: Job 69, arrTime 4.46567 and remaining duration 1.22228
+job 275: arrive at = 17.79780, length = 1.66390
+job 276: arrive at = 17.86043, length = 1.38280
+job 277: arrive at = 17.92422, length = 1.36944
+Job name: Job 70, arrTime 4.53176 and remaining duration 0.40922
+job 278: arrive at = 17.98915, length = 1.27133
+job 279: arrive at = 18.05215, length = 1.72610
+job 280: arrive at = 18.11487, length = 0.96550
+Job name: Job 71, arrTime 4.59840 and remaining duration 0.49176
+job 281: arrive at = 18.17882, length = 0.34865
+job 282: arrive at = 18.24203, length = 0.54867
+job 283: arrive at = 18.30855, length = 0.51150
+Job name: Job 72, arrTime 4.66171 and remaining duration 1.64024
+job 284: arrive at = 18.37106, length = 0.82144
+job 285: arrive at = 18.43501, length = 0.47419
+job 286: arrive at = 18.49973, length = 0.50573
+Job name: Job 18, arrTime 4.66565 and remaining duration 1.05441
+job 287: arrive at = 18.56375, length = 1.00834
+job 288: arrive at = 18.63017, length = 0.37850
+job 289: arrive at = 18.69469, length = 1.76273
+Job name: Job 73, arrTime 4.72699 and remaining duration 1.50678
+job 290: arrive at = 18.75826, length = 1.99753
+job 291: arrive at = 18.82284, length = 1.51739
+job 292: arrive at = 18.88749, length = 0.71058
+Job name: Job 74, arrTime 4.79309 and remaining duration 0.50388
+job 293: arrive at = 18.95081, length = 1.04849
+job 294: arrive at = 19.01533, length = 0.32569
+job 295: arrive at = 19.08059, length = 0.94262
+Job name: Job 75, arrTime 4.85809 and remaining duration 0.82575
+job 296: arrive at = 19.14716, length = 1.21627
+job 297: arrive at = 19.21174, length = 1.75161
+job 298: arrive at = 19.27682, length = 0.83151
+Job name: Job 19, arrTime 4.86565 and remaining duration 0.85784
+job 299: arrive at = 19.34203, length = 1.09267
+job 300: arrive at = 19.40621, length = 0.54612
+job 301: arrive at = 19.47280, length = 0.54295
+job 302: arrive at = 19.53687, length = 0.29047
+Job name: Job 76, arrTime 4.92176 and remaining duration 1.00561
+job 303: arrive at = 19.60249, length = 0.36708
+job 304: arrive at = 19.66799, length = 1.74351
+job 305: arrive at = 19.73221, length = 0.72949
+Job name: Job 77, arrTime 4.98728 and remaining duration 1.27439
+job 306: arrive at = 19.79633, length = 1.01396
+job 307: arrive at = 19.85967, length = 0.70507
+job 308: arrive at = 19.92615, length = 0.28875
+Job name: Job 78, arrTime 5.05364 and remaining duration 1.99181
+job 309: arrive at = 19.99012, length = 0.58324
+job 310: arrive at = 20.05356, length = 0.28521
+job 311: arrive at = 20.11718, length = 1.15657
+Job name: Job 5, arrTime 5.06565 and remaining duration 1.51747
+job 312: arrive at = 20.18217, length = 0.58578
+job 313: arrive at = 20.24474, length = 1.13818
+job 314: arrive at = 20.30796, length = 0.32955
+Job name: Job 79, arrTime 5.11984 and remaining duration 0.95434
+job 315: arrive at = 20.37262, length = 0.68830
+job 316: arrive at = 20.43659, length = 0.79621
+job 317: arrive at = 20.50282, length = 0.51525
+Job name: Job 80, arrTime 5.18352 and remaining duration 1.17809
+job 318: arrive at = 20.56634, length = 1.87142
+job 319: arrive at = 20.63043, length = 0.38885
+job 320: arrive at = 20.69694, length = 0.79553
+Job name: Job 81, arrTime 5.24779 and remaining duration 0.62735
+job 321: arrive at = 20.76213, length = 1.32864
+job 322: arrive at = 20.82600, length = 0.65340
+job 323: arrive at = 20.89225, length = 0.27204
+Job name: Job 20, arrTime 5.26565 and remaining duration 0.14943
+job 324: arrive at = 20.95568, length = 0.73343
+job 325: arrive at = 21.02082, length = 0.75524
+job 326: arrive at = 21.08360, length = 0.92400
+Job name: Job 82, arrTime 5.31436 and remaining duration 0.49761
+job 327: arrive at = 21.14683, length = 0.70790
+job 328: arrive at = 21.21151, length = 0.68571
+job 329: arrive at = 21.27398, length = 0.38266
+Job name: Job 83, arrTime 5.37924 and remaining duration 0.44430
+job 330: arrive at = 21.33736, length = 0.75816
+job 331: arrive at = 21.40146, length = 1.31666
+job 332: arrive at = 21.46433, length = 0.61891
+Job name: Job 84, arrTime 5.44326 and remaining duration 1.35919
+job 333: arrive at = 21.53070, length = 1.02089
+job 334: arrive at = 21.59344, length = 0.40851
+job 335: arrive at = 21.65739, length = 1.05134
+Job name: Job 21, arrTime 5.46565 and remaining duration 0.90581
+job 336: arrive at = 21.72191, length = 0.42645
+job 337: arrive at = 21.78480, length = 0.60038
+job 338: arrive at = 21.84983, length = 0.36440
+Job name: Job 85, arrTime 5.50595 and remaining duration 0.94271
+job 339: arrive at = 21.91474, length = 0.30622
+job 340: arrive at = 21.97824, length = 0.35848
+job 341: arrive at = 22.04131, length = 1.77079
+Job name: Job 86, arrTime 5.57020 and remaining duration 0.99047
+job 342: arrive at = 22.10430, length = 0.52976
+job 343: arrive at = 22.16848, length = 0.49357
+job 344: arrive at = 22.23455, length = 1.42870
+Job name: Job 87, arrTime 5.63512 and remaining duration 0.87176
+job 345: arrive at = 22.30002, length = 1.23507
+job 346: arrive at = 22.36383, length = 0.31695
+job 347: arrive at = 22.42953, length = 0.42392
+Job name: Job 22, arrTime 5.66565 and remaining duration 0.42739
+job 348: arrive at = 22.49498, length = 0.32676
+job 349: arrive at = 22.56058, length = 0.44231
+job 350: arrive at = 22.62382, length = 0.99066
+job 351: arrive at = 22.68622, length = 1.84220
+Job name: Job 88, arrTime 5.69931 and remaining duration 1.30335
+job 352: arrive at = 22.75051, length = 0.89919
+job 353: arrive at = 22.81456, length = 0.28771
+job 354: arrive at = 22.87822, length = 0.34467
+Job name: Job 89, arrTime 5.76505 and remaining duration 1.80530
+job 355: arrive at = 22.94217, length = 0.56562
+job 356: arrive at = 23.00469, length = 0.88191
+job 357: arrive at = 23.06997, length = 0.30009
+Job name: Job 90, arrTime 5.83042 and remaining duration 0.27272
+job 358: arrive at = 23.13307, length = 0.64279
+job 359: arrive at = 23.19600, length = 0.56041
+job 360: arrive at = 23.26222, length = 1.50159
+Job name: Job 6, arrTime 5.86565 and remaining duration 0.08481
+job 361: arrive at = 23.32740, length = 0.31565
+Job name: Job 91, arrTime 5.89465 and remaining duration 0.65059
+job 362: arrive at = 23.39026, length = 1.18594
+job 363: arrive at = 23.45609, length = 0.44304
+job 364: arrive at = 23.51943, length = 1.38443
+Job name: Job 92, arrTime 5.95847 and remaining duration 1.61381
+job 365: arrive at = 23.58269, length = 0.57354
+job 366: arrive at = 23.64561, length = 0.53215
+job 367: arrive at = 23.70956, length = 1.03910
+Job name: Job 93, arrTime 6.02317 and remaining duration 1.46488
+job 368: arrive at = 23.77580, length = 0.93941
+job 369: arrive at = 23.83866, length = 0.61023
+job 370: arrive at = 23.90155, length = 0.27488
+job 371: arrive at = 23.96597, length = 1.91416
+Job name: Job 23, arrTime 6.06565 and remaining duration 1.42640
+job 372: arrive at = 24.03131, length = 0.40712
+job 373: arrive at = 24.09424, length = 0.37245
+job 374: arrive at = 24.15882, length = 0.30705
+Job name: Job 94, arrTime 6.08717 and remaining duration 1.50420
+job 375: arrive at = 24.22514, length = 0.36863
+job 376: arrive at = 24.29101, length = 1.24647
+job 377: arrive at = 24.35686, length = 1.95600
+Job name: Job 95, arrTime 6.15293 and remaining duration 1.51147
+job 378: arrive at = 24.42083, length = 0.50387
+job 379: arrive at = 24.48336, length = 0.47273
+job 380: arrive at = 24.54597, length = 0.28850
+Job name: Job 96, arrTime 6.21715 and remaining duration 1.51595
+job 381: arrive at = 24.61198, length = 0.27385
+job 382: arrive at = 24.67608, length = 1.01292
+job 383: arrive at = 24.74181, length = 1.16709
+Job name: Job 24, arrTime 6.26565 and remaining duration 0.49997
+job 384: arrive at = 24.80541, length = 1.09988
+job 385: arrive at = 24.86997, length = 1.19808
+job 386: arrive at = 24.93274, length = 0.65039
+Job name: Job 97, arrTime 6.28283 and remaining duration 0.34738
+job 387: arrive at = 24.99629, length = 0.41572
+job 388: arrive at = 25.06169, length = 0.51868
+job 389: arrive at = 25.12640, length = 0.36736
+Job name: Job 98, arrTime 6.34897 and remaining duration 1.65433
+job 390: arrive at = 25.18928, length = 1.00160
+job 391: arrive at = 25.25371, length = 0.79982
+job 392: arrive at = 25.31708, length = 0.76272
+Job name: Job 99, arrTime 6.41144 and remaining duration 0.49048
+job 393: arrive at = 25.38040, length = 0.29587
+job 394: arrive at = 25.44292, length = 0.33352
+job 395: arrive at = 25.50704, length = 1.03084
+job 396: arrive at = 25.57165, length = 0.43488
+Job name: Job 25, arrTime 6.46565 and remaining duration 0.30654
+job 397: arrive at = 25.63588, length = 0.71518
+job 398: arrive at = 25.70152, length = 0.44577
+job 399: arrive at = 25.76407, length = 1.52569
+Job name: Job 100, arrTime 6.47682 and remaining duration 1.06811
+job 400: arrive at = 25.82876, length = 0.30807
+job 401: arrive at = 25.89520, length = 0.77661
+job 402: arrive at = 25.95801, length = 1.49665
+Job name: Job 101, arrTime 6.54110 and remaining duration 0.62649
+job 403: arrive at = 26.02457, length = 0.27560
+job 404: arrive at = 26.08946, length = 0.72632
+job 405: arrive at = 26.15301, length = 0.40893
+Job name: Job 102, arrTime 6.60601 and remaining duration 0.43359
+job 406: arrive at = 26.21704, length = 1.80400
+job 407: arrive at = 26.28229, length = 1.45629
+job 408: arrive at = 26.34865, length = 0.38466
+Job name: Job 7, arrTime 6.66565 and remaining duration 0.70430
+job 409: arrive at = 26.41235, length = 0.58055
+job 410: arrive at = 26.47573, length = 1.62737
+job 411: arrive at = 26.53872, length = 1.51641
+Job name: Job 103, arrTime 6.67009 and remaining duration 0.29555
+job 412: arrive at = 26.60448, length = 0.61668
+job 413: arrive at = 26.67042, length = 1.21365
+job 414: arrive at = 26.73613, length = 0.37080
+Job name: Job 104, arrTime 6.73300 and remaining duration 0.73261
+job 415: arrive at = 26.80203, length = 0.29304
+job 416: arrive at = 26.86581, length = 1.36964
+job 417: arrive at = 26.93159, length = 0.58837
+Job name: Job 105, arrTime 6.79724 and remaining duration 1.05447
+job 418: arrive at = 26.99725, length = 0.81905
+job 419: arrive at = 27.06084, length = 1.40143
+job 420: arrive at = 27.12610, length = 0.59020
+Job name: Job 106, arrTime 6.86381 and remaining duration 0.48340
+job 421: arrive at = 27.19162, length = 1.68036
+job 422: arrive at = 27.25727, length = 0.47400
+job 423: arrive at = 27.32298, length = 0.62272
+Job name: Job 26, arrTime 6.86565 and remaining duration 0.24500
+job 424: arrive at = 27.38601, length = 0.33886
+job 425: arrive at = 27.45260, length = 0.36637
+job 426: arrive at = 27.51790, length = 0.82739
+Job name: Job 107, arrTime 6.93010 and remaining duration 1.84152
+job 427: arrive at = 27.58254, length = 0.53375
+job 428: arrive at = 27.64525, length = 0.46967
+job 429: arrive at = 27.70974, length = 0.67375
+Job name: Job 108, arrTime 6.99669 and remaining duration 1.08016
+job 430: arrive at = 27.77442, length = 0.48946
+job 431: arrive at = 27.83944, length = 0.57580
+job 432: arrive at = 27.90495, length = 0.42459
+job 433: arrive at = 27.96981, length = 0.60359
+Job name: Job 109, arrTime 7.05942 and remaining duration 1.09884
+job 434: arrive at = 28.03507, length = 0.75245
+job 435: arrive at = 28.09929, length = 0.50593
+job 436: arrive at = 28.16512, length = 1.12975
+Job name: Job 27, arrTime 7.06565 and remaining duration 1.07245
+job 437: arrive at = 28.22993, length = 1.22700
+job 438: arrive at = 28.29533, length = 0.52755
+job 439: arrive at = 28.35920, length = 0.69700
+Job name: Job 110, arrTime 7.12541 and remaining duration 0.55988
+job 440: arrive at = 28.42184, length = 0.73290
+job 441: arrive at = 28.48568, length = 0.30200
+job 442: arrive at = 28.55230, length = 0.93825
+Job name: Job 111, arrTime 7.19177 and remaining duration 1.86490
+job 443: arrive at = 28.61630, length = 1.06426
+job 444: arrive at = 28.67996, length = 0.53236
+job 445: arrive at = 28.74300, length = 0.85478
+Job name: Job 112, arrTime 7.25719 and remaining duration 1.67217
+job 446: arrive at = 28.80623, length = 1.10613
+job 447: arrive at = 28.87270, length = 0.33261
+job 448: arrive at = 28.93845, length = 1.82757
+Job name: Job 28, arrTime 7.26565 and remaining duration 1.27395
+job 449: arrive at = 29.00252, length = 0.48438
+job 450: arrive at = 29.06867, length = 1.60111
+job 451: arrive at = 29.13235, length = 1.06645
+Job name: Job 113, arrTime 7.31995 and remaining duration 1.40865
+job 452: arrive at = 29.19536, length = 0.83175
+job 453: arrive at = 29.26196, length = 0.97963
+job 454: arrive at = 29.32444, length = 1.80432
+Job name: Job 114, arrTime 7.38598 and remaining duration 0.73880
+job 455: arrive at = 29.39067, length = 0.52997
+job 456: arrive at = 29.45428, length = 0.28719
+job 457: arrive at = 29.51672, length = 0.30863
+Job name: Job 115, arrTime 7.45058 and remaining duration 0.40655
+job 458: arrive at = 29.58272, length = 1.21774
+job 459: arrive at = 29.64836, length = 1.91610
+job 460: arrive at = 29.71355, length = 0.32473
+Job name: Job 2, arrTime 7.46565 and remaining duration 0.38928
+job 461: arrive at = 29.77615, length = 0.31744
+job 462: arrive at = 29.83989, length = 1.26395
+job 463: arrive at = 29.90590, length = 1.21370
+job 464: arrive at = 29.96935, length = 1.92854
+Job name: Job 116, arrTime 7.51485 and remaining duration 0.47939
+job 465: arrive at = 30.03536, length = 1.46170
+job 466: arrive at = 30.09779, length = 0.46264
+job 467: arrive at = 30.16319, length = 0.33069
+Job name: Job 117, arrTime 7.57898 and remaining duration 1.37272
+job 468: arrive at = 30.22962, length = 0.43497
+job 469: arrive at = 30.29477, length = 1.06498
+job 470: arrive at = 30.35953, length = 0.78945
+Job name: Job 118, arrTime 7.64310 and remaining duration 1.62226
+job 471: arrive at = 30.42500, length = 0.71906
+job 472: arrive at = 30.48984, length = 1.20307
+job 473: arrive at = 30.55405, length = 0.79258
+Job name: Job 29, arrTime 7.66565 and remaining duration 0.13975
+job 474: arrive at = 30.62037, length = 0.59206
+job 475: arrive at = 30.68425, length = 0.38399
+Job name: Job 119, arrTime 7.70961 and remaining duration 0.33511
+job 476: arrive at = 30.74723, length = 1.18582
+job 477: arrive at = 30.81268, length = 0.32825
+job 478: arrive at = 30.87577, length = 1.07888
+Job name: Job 120, arrTime 7.77321 and remaining duration 0.75902
+job 479: arrive at = 30.93924, length = 0.61255
+job 480: arrive at = 31.00197, length = 0.86903
+job 481: arrive at = 31.06819, length = 0.69707
+Job name: Job 121, arrTime 7.83650 and remaining duration 1.34698
+job 482: arrive at = 31.13252, length = 0.44087
+job 483: arrive at = 31.19658, length = 0.89506
+job 484: arrive at = 31.25937, length = 0.38018
+Job name: Job 30, arrTime 7.86565 and remaining duration 0.27160
+job 485: arrive at = 31.32265, length = 1.61494
+job 486: arrive at = 31.38750, length = 0.48858
+job 487: arrive at = 31.44991, length = 1.34697
+Job name: Job 122, arrTime 7.90262 and remaining duration 0.34159
+job 488: arrive at = 31.51244, length = 0.47930
+job 489: arrive at = 31.57872, length = 0.61650
+job 490: arrive at = 31.64310, length = 0.89408
+job 491: arrive at = 31.70778, length = 0.70252
+Job name: Job 123, arrTime 7.96871 and remaining duration 0.62830
+job 492: arrive at = 31.77402, length = 1.20967
+job 493: arrive at = 31.84008, length = 0.94070
+job 494: arrive at = 31.90486, length = 0.86221
+Job name: Job 124, arrTime 8.03247 and remaining duration 0.43560
+job 495: arrive at = 31.96805, length = 0.43018
+job 496: arrive at = 32.03294, length = 1.04794
+job 497: arrive at = 32.09622, length = 0.50951
+Job name: Job 31, arrTime 8.06565 and remaining duration 0.51238
+job 498: arrive at = 32.15994, length = 1.33340
+job 499: arrive at = 32.22531, length = 0.93567
+job 500: arrive at = 32.28795, length = 0.69147
+Job name: Job 125, arrTime 8.09709 and remaining duration 0.42972
+job 501: arrive at = 32.35334, length = 0.78231
+job 502: arrive at = 32.41693, length = 0.46025
+job 503: arrive at = 32.48004, length = 1.33035
+Job name: Job 126, arrTime 8.16185 and remaining duration 0.71293
+job 504: arrive at = 32.54460, length = 0.43639
+job 505: arrive at = 32.60876, length = 1.17940
+job 506: arrive at = 32.67189, length = 1.35687
+Job name: Job 127, arrTime 8.22821 and remaining duration 0.28070
+job 507: arrive at = 32.73685, length = 1.79113
+job 508: arrive at = 32.80125, length = 0.75459
+job 509: arrive at = 32.86563, length = 0.52623
+Job name: Job 8, arrTime 8.26565 and remaining duration 1.02279
+job 510: arrive at = 32.92915, length = 0.50549
+job 511: arrive at = 32.99507, length = 1.54715
+job 512: arrive at = 33.05765, length = 0.76807
+Job name: Job 128, arrTime 8.29401 and remaining duration 0.65173
+job 513: arrive at = 33.12289, length = 0.91715
+job 514: arrive at = 33.18743, length = 1.89552
+job 515: arrive at = 33.25283, length = 0.47507
+Job name: Job 129, arrTime 8.35670 and remaining duration 1.61781
+job 516: arrive at = 33.31583, length = 0.37588
+job 517: arrive at = 33.38117, length = 0.60733
+job 518: arrive at = 33.44688, length = 1.00700
+job 519: arrive at = 33.50929, length = 1.91988
+Job name: Job 130, arrTime 8.41913 and remaining duration 1.90864
+job 520: arrive at = 33.57219, length = 0.78326
+job 521: arrive at = 33.63564, length = 0.46357
+job 522: arrive at = 33.69948, length = 0.90827
+Job name: Job 32, arrTime 8.46565 and remaining duration 0.92530
+job 523: arrive at = 33.76432, length = 1.39567
+job 524: arrive at = 33.82791, length = 1.38214
+job 525: arrive at = 33.89360, length = 1.20386
+Job name: Job 131, arrTime 8.48252 and remaining duration 1.35666
+job 526: arrive at = 33.95602, length = 0.67934
+job 527: arrive at = 34.01915, length = 1.64159
+job 528: arrive at = 34.08401, length = 0.56433
+Job name: Job 132, arrTime 8.54562 and remaining duration 1.34814
+job 529: arrive at = 34.14903, length = 0.27464
+job 530: arrive at = 34.21326, length = 0.28250
+job 531: arrive at = 34.27905, length = 1.79457
+Job name: Job 133, arrTime 8.60815 and remaining duration 0.35650
+job 532: arrive at = 34.34223, length = 1.29671
+job 533: arrive at = 34.40732, length = 0.41493
+job 534: arrive at = 34.47132, length = 1.48409
+Job name: Job 33, arrTime 8.66565 and remaining duration 0.07569
+job 535: arrive at = 34.53750, length = 1.78336
+Job name: Job 134, arrTime 8.67420 and remaining duration 0.29187
+job 536: arrive at = 34.60073, length = 1.68169
+job 537: arrive at = 34.66383, length = 0.63368
+job 538: arrive at = 34.72990, length = 1.18638
+Job name: Job 135, arrTime 8.73824 and remaining duration 0.35936
+job 539: arrive at = 34.79480, length = 0.70002
+job 540: arrive at = 34.85935, length = 1.55837
+job 541: arrive at = 34.92251, length = 1.91057
+job 542: arrive at = 34.98723, length = 0.69081
+Job name: Job 136, arrTime 8.80397 and remaining duration 1.10627
+job 543: arrive at = 35.05295, length = 0.44529
+job 544: arrive at = 35.11537, length = 1.99559
+job 545: arrive at = 35.17893, length = 1.65994
+Job name: Job 34, arrTime 8.86565 and remaining duration 1.61666
+job 546: arrive at = 35.24275, length = 0.35734
+job 547: arrive at = 35.30907, length = 0.81931
+job 548: arrive at = 35.37520, length = 0.42897
+Job name: Job 137, arrTime 8.86983 and remaining duration 0.92319
+job 549: arrive at = 35.43958, length = 0.33977
+job 550: arrive at = 35.50325, length = 0.37759
+job 551: arrive at = 35.56853, length = 0.73092
+Job name: Job 138, arrTime 8.93520 and remaining duration 1.18180
+job 552: arrive at = 35.63355, length = 0.33681
+job 553: arrive at = 35.69856, length = 0.46457
+job 554: arrive at = 35.76505, length = 1.48893
+Job name: Job 139, arrTime 9.00089 and remaining duration 1.94360
+job 555: arrive at = 35.82900, length = 0.34692
+job 556: arrive at = 35.89149, length = 0.39808
+job 557: arrive at = 35.95584, length = 0.82925
+Job name: Job 35, arrTime 9.06565 and remaining duration 0.58710
+job 558: arrive at = 36.01844, length = 1.24044
+job 559: arrive at = 36.08275, length = 1.75816
+job 560: arrive at = 36.14915, length = 1.15392
+Job name: Job 140, arrTime 9.06719 and remaining duration 0.82581
+job 561: arrive at = 36.21171, length = 0.32263
+job 562: arrive at = 36.27763, length = 1.22684
+job 563: arrive at = 36.34146, length = 0.54728
+Job name: Job 141, arrTime 9.13373 and remaining duration 0.40785
+job 564: arrive at = 36.40503, length = 1.58867
+job 565: arrive at = 36.47166, length = 0.55040
+job 566: arrive at = 36.53453, length = 1.76714
+Job name: Job 142, arrTime 9.19891 and remaining duration 0.27097
+job 567: arrive at = 36.59949, length = 0.96999
+job 568: arrive at = 36.66506, length = 1.84617
+job 569: arrive at = 36.72838, length = 1.19796
+Job name: Job 143, arrTime 9.26287 and remaining duration 0.37192
+job 570: arrive at = 36.79421, length = 1.14654
+job 571: arrive at = 36.85821, length = 0.66228
+job 572: arrive at = 36.92108, length = 0.61885
+job 573: arrive at = 36.98609, length = 0.87013
+Job name: Job 9, arrTime 9.26565 and remaining duration 0.68186
+job 574: arrive at = 37.05174, length = 0.84687
+job 575: arrive at = 37.11590, length = 0.73157
+job 576: arrive at = 37.18092, length = 0.80315
+Job name: Job 144, arrTime 9.32847 and remaining duration 1.01915
+job 577: arrive at = 37.24698, length = 0.99376
+job 578: arrive at = 37.31332, length = 1.79229
+job 579: arrive at = 37.37782, length = 0.86350
+Job name: Job 145, arrTime 9.39105 and remaining duration 0.41160
+job 580: arrive at = 37.44045, length = 1.24145
+job 581: arrive at = 37.50676, length = 1.16199
+job 582: arrive at = 37.57184, length = 1.51688
+Job name: Job 146, arrTime 9.45477 and remaining duration 0.39739
+job 583: arrive at = 37.63594, length = 0.48477
+job 584: arrive at = 37.70241, length = 0.61272
+job 585: arrive at = 37.76746, length = 1.83165
+Job name: Job 36, arrTime 9.46565 and remaining duration 0.38229
+job 586: arrive at = 37.83056, length = 0.55614
+job 587: arrive at = 37.89461, length = 1.40365
+job 588: arrive at = 37.96085, length = 0.52347
+Job name: Job 147, arrTime 9.51903 and remaining duration 0.29722
+job 589: arrive at = 38.02549, length = 0.44970
+job 590: arrive at = 38.09108, length = 0.29700
+job 591: arrive at = 38.15515, length = 0.62652
+Job name: Job 148, arrTime 9.58415 and remaining duration 1.54361
+job 592: arrive at = 38.21925, length = 0.45994
+job 593: arrive at = 38.28568, length = 0.66862
+job 594: arrive at = 38.35042, length = 0.47192
+Job name: Job 149, arrTime 9.64857 and remaining duration 1.19768
+job 595: arrive at = 38.41290, length = 0.33009
+job 596: arrive at = 38.47540, length = 0.49283
+job 597: arrive at = 38.53958, length = 1.27057
+Job name: Job 37, arrTime 9.66565 and remaining duration 0.14607
+job 598: arrive at = 38.60534, length = 0.32608
+job 599: arrive at = 38.67042, length = 1.09621
+Job name: Job 150, arrTime 9.71459 and remaining duration 1.02613
+job 600: arrive at = 38.73619, length = 0.83655
+job 601: arrive at = 38.80237, length = 1.71744
+job 602: arrive at = 38.86835, length = 1.25552
+job 603: arrive at = 38.93225, length = 1.17074
+Job name: Job 151, arrTime 9.77831 and remaining duration 1.96717
+job 604: arrive at = 38.99503, length = 0.35485
+job 605: arrive at = 39.06125, length = 0.39992
+job 606: arrive at = 39.12532, length = 0.28687
+Job name: Job 152, arrTime 9.84251 and remaining duration 1.81659
+job 607: arrive at = 39.19110, length = 1.19360
+job 608: arrive at = 39.25706, length = 1.22747
+job 609: arrive at = 39.32065, length = 1.32073
+Job name: Job 38, arrTime 9.86565 and remaining duration 0.14588
+job 610: arrive at = 39.38620, length = 1.75560
+job 611: arrive at = 39.45232, length = 0.60101
+End at 39.47983488
+Total waiting time     : 2965.3686
+Mean waiting time      : 2.9654
+Total server idle time : 0.0656
+processing time = 39.41418932
+end time = 39.47983488
+begin time = 0.06564557
+CPU utilization        : 1.001668

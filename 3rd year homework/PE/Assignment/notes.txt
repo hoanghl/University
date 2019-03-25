@@ -1,0 +1,11 @@
+I. Requiments
+Những nhóm thiên về coding (Top-Down Modular Design, Structured walk-through) thì tôi có thể xem trực tiếp trên simulation code.
+  - Các em phải làm: 
+    Deterministic models, 
+    Continuity test, 
+    Degeneracy test.
+Tất cả điều này phải được report lại.
+
+1. Cách tính CPU Utilization:
+    trong OS: CPU Utilization = timeCPU(CPU_Burst) / (timeCPU(CPU_Burst) + timeCPU(IO_Burst))
+    trong simpy: không tồn tại khái niệm IO_Burst

@@ -1,0 +1,6 @@
+Basic description
+    1. Use analog to move
+    2. Rules
+        Win: length = 10
+        Lose: hit the wall
+        3 apples ==> length++

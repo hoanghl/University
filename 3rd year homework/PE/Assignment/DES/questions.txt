@@ -1,0 +1,6 @@
+FIFOwStat.py
+serversleeping: để làm gì ? => line 26 để làm gì?
+line 37 để làm gì?
+env.process() có mục đích là gì mà tại sao trong class Server và JobGen
+
+final exam: queue, simulation, calculate somthing related to queue
