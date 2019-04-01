@@ -1,0 +1,9 @@
+Thông tin:
+- nằm ngang, LCD hướng lên     : AcceX:  -0.08; AcceY:  -0.01; AcceZ: +0.90
+- nằm ngang, LCD hướng xuống   : AcceX:  -0.08; AcceY:  -0.00; AcceZ: -1.00
+- nằm dọc,   LCD hướng ra xa   : AcceX:  -0.10; AcceY:  -0.90; AcceZ: -0.03
+- nằm dọc,   LCD hướng về mình : AcceX:  -0.09; AcceY:  +0.90; AcceZ: -0.10
+- nằm dọc,   LCD hướng qua trái: AcceX:  +0.90; AcceY:  -0.10; AcceZ: +0.02
+- Nằm dọc,   LCD hướng qua phải: AcceX:  -1.00; AcceY:  +0.02; AcceZ: -0.03
+
+- Chuyển động: LCD ban đầu đang hướng lên
