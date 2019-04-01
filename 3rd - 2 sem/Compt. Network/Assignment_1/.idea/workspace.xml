@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2da683fb-253b-4c7c-afa1-e90899e9530f" name="Default Changelist" comment="Compt. Network Assignment 1">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BTL1_HKII-1819.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gateway/ContactServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gateway/Gateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gateway/Processing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/General/General_Resources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/General/Packet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tester/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tester/checked_module.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ass_Compt_Network1/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="2da683fb-253b-4c7c-afa1-e90899e9530f" name="Default Changelist" comment="Stuffs self-study in &quot;Embedded System&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Logo-hcmut.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +30,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gateway/Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
+            <state relative-caret-position="103">
               <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
@@ -147,18 +135,39 @@
       <option name="presentableId" value="Default" />
       <updated>1554092279692</updated>
     </task>
+    <task id="LOCAL-00001" summary="Compt. Network Assignment 1">
+      <created>1554092584813</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554092584815</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Some changes to &quot;Mini IoT Project&quot;">
+      <created>1554092844002</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554092844002</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Stuffs self-study in &quot;Embedded System&quot;">
+      <created>1554092920470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554092920470</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="47" width="1922" height="1034" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25376344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -166,7 +175,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -205,7 +214,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Compt. Network Assignment 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compt. Network Assignment 1" />
+    <MESSAGE value="Some changes to &quot;Mini IoT Project&quot;" />
+    <MESSAGE value="Stuffs self-study in &quot;Embedded System&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stuffs self-study in &quot;Embedded System&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Gateway/ContactServer.java">
@@ -217,7 +228,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gateway/Processing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="103">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
