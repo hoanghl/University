@@ -37,6 +37,7 @@ public class ContactServer implements Runnable {
             while (connOKPacket.getPacketFromServer(gateway) == 1 || connOKPacket.getRepliedData() == Packet.FAILEDMSG)
                 outputStream.write(connPacket.toBytes());
 
+
             // analyse CONNECTOK packet
             Gateway.intvServer = connOKPacket.getRepliedData();
 
@@ -50,7 +51,7 @@ public class ContactServer implements Runnable {
 
         while (true) {
             try {
-                Thread.sleep(Gateway.intvServer);
+                Thread.sleep(Gateway.intvServer * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -64,12 +65,19 @@ public class ContactServer implements Runnable {
                 DataOutputStream outputStream = new DataOutputStream(sender.getOutputStream());
 
                 // send DATA packet to server
+
+                System.out.println("Data about to send to server: ");
+                for (byte b: dataPacket.get_data())
+                    System.out.println(b);
+                System.out.println("Done");
+                System.out.println("len: " + dataPacket.get_data_length());
                 outputStream.write(dataPacket.toBytes());
 
                 // wait for DATAOK
                 Packet dataOKPacket = new Packet();
                 while (dataOKPacket.getPacketFromServer(sender) == 1 || dataOKPacket.getRepliedData() == 0xFFFF)
                     outputStream.write(dataPacket.toBytes());
+
 
                 Gateway.intvServer = dataOKPacket.getRepliedData();
 

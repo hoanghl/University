@@ -121,13 +121,17 @@ public class Packet {
 
         extratingBytes.addLast(this._packetID);
 
+
         if (this._password != null)
             for (char c : this._password.toCharArray())
                 extratingBytes.addLast((byte) c);
 
+
         if (this._deviceID != null)
             for (char c : this._deviceID.toCharArray())
                 extratingBytes.addLast((byte) c);
+
+
 
         for (byte b : this.getBytesFromInt(this._data_length))
             extratingBytes.addLast(b);
@@ -135,7 +139,6 @@ public class Packet {
         if (this._data != null)
             for (Byte b : this._data)
                 extratingBytes.addLast(b);
-
 
         int i = 0;
         byte[] tmp = new byte[extratingBytes.toArray().length];
@@ -171,17 +174,17 @@ public class Packet {
             else
                 this._packetID = firstByte;
 
-
             // receive next 4 bytes
             byte[] bytes = new byte[4];
-            for (byte b : bytes)
-                b = inputStream.readByte();
+            for (int i = 0; i < 4; i++)
+                bytes[i] = inputStream.readByte();
+
+
             int data_length = getIntFromBytes(bytes);
             if (data_length > 100)
                 return 1;
             else
                 this._data_length = data_length;
-
 
             //receive payload
             if (this._data == null)
@@ -192,6 +195,8 @@ public class Packet {
 
             for (int i = 0; i < this._data_length; i++)
                 this._data.add(inputStream.readByte());
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -212,10 +217,11 @@ public class Packet {
 
         byte[] bytes = new byte[this._data.size()];
         int i = 0;
-        for (Byte b : (Byte[])(this._data.toArray()))
+        for (Byte b : (this._data.toArray(new Byte[this._data.size()])))
             bytes[i++] = b;
 
         int interval = getIntFromBytes(bytes);
+
         if (interval > General_Resources.MAX_INTERVAL || interval <= 0)
             return -1;                                                      // incorrect byte receiving leads to unreasonable converting result
         else

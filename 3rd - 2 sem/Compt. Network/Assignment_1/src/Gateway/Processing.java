@@ -115,6 +115,10 @@ public class Processing implements Runnable {
                         else {
                             // add bytes in packet to LinkedList
 
+                            System.out.println("Gateway received: ");
+                            for (byte b : clientPacket.get_data())
+                                System.out.println(b);
+                            System.out.println("Done");
                             this._gateway.access_sendBytes(clientPacket.get_data(), 1);
 
                             // response DATAOK = interval

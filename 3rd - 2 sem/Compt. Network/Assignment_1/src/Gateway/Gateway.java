@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class Gateway {
-    public static int               intvClient  = 10;
+    public static int               intvClient  = 2;
     public static int               intvServer  = 0;
     public static String            password    = "congsanvkl";
 
@@ -53,6 +53,8 @@ public class Gateway {
     synchronized public void    removeDeviceID(String _deviceID) {
         this._deviceList.remove(_deviceID);
     }
+
+
     /**
      * The method is used by Processing thread and ContactServer thread <br>
      *     Processing threads add bytes extracted <br>
@@ -73,7 +75,7 @@ public class Gateway {
         else {
             // ContactServer thread in action
 
-            Byte[] tmp = (Byte [])this._sendBytes.toArray();
+            Byte[] tmp = this._sendBytes.toArray(new Byte[this._sendBytes.size()]);
             this._sendBytes.clear();
             return tmp;
         }
@@ -84,9 +86,9 @@ public class Gateway {
 
         Random r = new Random();
         for (int i = 0; i < 5; i++)
-            tmp.append(r.nextInt() % ('9' - '0') + '0');
+            tmp.append(r.nextInt(10));
 
-        return r.toString();
+        return tmp.toString();
     }
 
 
@@ -94,26 +96,26 @@ public class Gateway {
 
     public static void main(String[] args) {
         // Main thread: receive UDP packet from client and forward packet's bytes to 2 Processing threads
-        // Thus,
         try {
             byte[] rcvBuffer = new byte[General_Resources.MAX_BUFF];
-
+            DatagramSocket receiver = new DatagramSocket(General_Resources.GATEWAY_PORT);
             Gateway      gateway = new Gateway();
 
-            DatagramSocket receiver = new DatagramSocket(General_Resources.GATEWAY_PORT);
+
+
+            byte[] dump_bytes = new byte[10];
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+                dump_bytes[i] = (byte)(random.nextInt(100));
+
+            gateway.access_sendBytes(dump_bytes, 1);
+
 
             // create necessary threads: 1 ServerContactThread, 2 Processing
-
-
-            // TESTING
-            // ContactServer serverContact = new ContactServer(gateway);
-
-
-
-
+            ContactServer serverContact = new ContactServer(gateway);
             Processing    processing1   = new Processing(gateway, receiver, "T1");
             Processing    processing2   = new Processing(gateway, receiver, "T2");
-            // new Thread(serverContact).start();
+            new Thread(serverContact).start();
             new Thread(processing1).start();
             new Thread(processing2).start();
 
