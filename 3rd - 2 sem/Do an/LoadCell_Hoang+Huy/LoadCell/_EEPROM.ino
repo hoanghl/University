@@ -1,8 +1,14 @@
+/**
+ *  This files contains functions used to communicate with EEPROM
+ */ 
+
 #include    <EEPROM.h>
 
 const int   EEPROMAddr = 0;
 
-void eeWriteFloat(float val) {
+bool        isDatainMem = false;
+
+void eeWriteCalibrate(float val) {
     int pos = EEPROMAddr;    
     byte* p = (byte*) &val;
 
@@ -13,7 +19,7 @@ void eeWriteFloat(float val) {
     EEPROM.commit();
 }
 
-float eeGetFloat() {
+float eeGetCalibrate() {
   int pos = EEPROMAddr;
   float val = 0;
   byte* p = (byte*) &val;
@@ -23,4 +29,9 @@ float eeGetFloat() {
   *(p + 3)  = EEPROM.read(pos + 3);
 
   return val;
+}
+
+
+void    SaveMem() {
+    
 }

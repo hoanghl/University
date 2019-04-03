@@ -2,15 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da683fb-253b-4c7c-afa1-e90899e9530f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tester/UDPClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.directory" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.directory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTL1_HKII-1819.doc" beforeDir="false" afterPath="$PROJECT_DIR$/BTL1_HKII-1819.doc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gateway/ContactServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gateway/ContactServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gateway/Gateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gateway/Gateway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gateway/Processing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gateway/Processing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/General/General_Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/General/General_Resources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/General/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/General/Packet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tester/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tester/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester/UDPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tester/checked_module.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester/checked_module.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_1/Lab1 - Network Devices.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_1/Lab1 - Network Devices.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_1/Lab1 - Network Devices.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_1/Lab1 - Network Devices.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_10/Lab10 - UDP with Wireshark.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_10/Lab10 - UDP with Wireshark.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_2/1652212.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_2/1652212.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_2/Lab2 - Network Tools.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_2/Lab2 - Network Tools.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/1652212.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/1652212.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/Lab3 - Java on eclipse.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/Lab3 - Java on eclipse.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/Screenshot_20190227_091037.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/Screenshot_20190227_091037.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/Screenshot_20190227_091330.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/Screenshot_20190227_091330.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/src/Client/Week_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/src/Client/Week_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_3/src/Server/Week_3_Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_3/src/Server/Week_3_Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_4/Lab4 - Java Socket Programming.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_4/Lab4 - Java Socket Programming.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_5/Lab5 - Introduction to Packet Tracer.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_5/Lab5 - Introduction to Packet Tracer.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_6/Lab6 - Introduction to Wireshark.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_6/Lab6 - Introduction to Wireshark.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_7/Lab7 - HTTP with Wireshark.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_7/Lab7 - HTTP with Wireshark.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_8/Lab8 - DNS with Wireshark.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_8/Lab8 - DNS with Wireshark.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week_9/Lab9 - TCP with Wireshark.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Week_9/Lab9 - TCP with Wireshark.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LCD_and_Buttons/LCD_and_Buttons.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LCD_and_Buttons/LCD_and_Buttons.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LCD_and_Buttons/LCD_and_Buttons.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell/LoadCell.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell/LoadCell.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell/Timer.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell/_EEPROM.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell/_EEPROM.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell/_LoadCell.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell/_LoadCell.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/.vscode/ipch/b7430613ebafb2a6/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/LoadCell.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/LoadCell.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/ThingSpeak.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/ThingSpeak.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/Timer.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/Timer.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/_EEPROM.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/_EEPROM.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/_LoadCell.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Do an/LoadCell_Hoang+Huy/LoadCell/_LoadCell.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_2/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_2/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_2/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_2/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_2/Prob_1/prob_1.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_2/Prob_1/prob_1.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_2/[Edison] Lab 2 - Network-programming-Intel-Edison.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_2/[Edison] Lab 2 - Network-programming-Intel-Edison.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/Screenshot_20190228_074742.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/Screenshot_20190228_074742.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/Screenshot_20190228_075536.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/Screenshot_20190228_075536.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/[Edison] Lab 3 - Peripheral-programming-Intel-Edison.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/[Edison] Lab 3 - Peripheral-programming-Intel-Edison.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_1/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_1/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_1/mraa_demo.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_1/mraa_demo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_2/screen_4.0.3-r4_core2-32.ipk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_2/screen_4.0.3-r4_core2-32.ipk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_2/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_2/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_2/mraa_gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_2/mraa_gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_3/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_3/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_3/mraa_uart.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/Section_3_3/mraa_uart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/SparkFun_9DOF_Block_for_Edison_CPP_Library-master.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_3/materials/Section_3/SparkFun_9DOF_Block_for_Edison_CPP_Library-master.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/[Edison] Lab 4 - Using OLED Block.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/[Edison] Lab 4 - Using OLED Block.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_code/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_code/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/Draw.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/Draw.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/resources.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/resources.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/resources.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_4/_submission/resources.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/2357c17ca7c34ef3/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/2357c17ca7c34ef3/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/a8911b4f4a91ee5/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/a8911b4f4a91ee5/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/ed504ffa56285d6b/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/ed504ffa56285d6b/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/fb0fa5b92bcc6f4d/SFE_LSM9DS0.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/fb0fa5b92bcc6f4d/SFE_LSM9DS0.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/fb0fa5b92bcc6f4d/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/.vscode/ipch/fb0fa5b92bcc6f4d/mmap_address.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/makefile_main" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/Spark/makefile_main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/SparkFun_9DOF_Block_for_Edison_CPP_Library-master.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/SparkFun_9DOF_Block_for_Edison_CPP_Library-master.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/[Edison] Lab 5 - Using 9DOF Block.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/[Edison] Lab 5 - Using 9DOF Block.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/.vscode/ipch/78b5005527e410e3/mmap_address.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/.vscode/ipch/78b5005527e410e3/mmap_address.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/Measure_angle_Arduino_MPU6050.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/Measure_angle_Arduino_MPU6050.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/Note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/Lesson_5/_code/Measure_angle_Arduino_MPU6050/Note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/_Project/Smart_city_pilot_projects_using_LoRa_and_IEEE80215.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/_Project/Smart_city_pilot_projects_using_LoRa_and_IEEE80215.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/_Project/isprs-archives-XLII-3-W4-569-2018.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/_Project/isprs-archives-XLII-3-W4-569-2018.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Emb. System/_Project/paper_final_2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Emb. System/_Project/paper_final_2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +103,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gateway/ContactServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state>
               <caret line="72" column="73" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
               <folding>
                 <element signature="method#connServer#0;class#ContactServer#0" />
@@ -37,9 +116,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/General/General_Resources.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="3" column="51" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tester/UDPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state>
               <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -51,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tester/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state>
               <caret line="106" selection-start-line="106" selection-end-line="109" />
             </state>
           </provider>
@@ -60,11 +148,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gateway/Gateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
+            <state>
               <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding>
-                <element signature="e#1319#1320#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
                 <element signature="docComment;method#access_sendBytes#0;class#Gateway#0" />
                 <element signature="method#access_sendBytes#0;class#Gateway#0" />
                 <element signature="method#genDeviceID#0;class#Gateway#0" />
@@ -76,17 +162,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gateway/Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
+            <state>
               <caret line="118" selection-start-line="118" selection-end-line="119" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/General/Packet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1596">
-              <caret line="178" column="39" lean-forward="true" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
+            <state relative-caret-position="1656">
+              <caret line="174" column="43" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
               <folding>
                 <element signature="docComment;method#Packet#1;class#Packet#0" />
                 <element signature="method#Packet#1;class#Packet#0" />
@@ -159,6 +245,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,21 +276,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Tester" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Assignment_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,14 +338,27 @@
       <option name="project" value="LOCAL" />
       <updated>1554094311497</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finish my task">
+      <created>1554187075339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554187075339</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Slight changes">
+      <created>1554187141878</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554187141878</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="46" width="1920" height="1034" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="45" width="1920" height="1035" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26505375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26881722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -277,7 +372,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298122" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.33021078" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286385" />
@@ -336,19 +431,31 @@
     <MESSAGE value="Some changes to &quot;Mini IoT Project&quot;" />
     <MESSAGE value="Stuffs self-study in &quot;Embedded System&quot;" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Finish my task" />
+    <MESSAGE value="Slight changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight changes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Gateway/Processing.java">
+    <entry file="file://$PROJECT_DIR$/src/Gateway/ContactServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="118" selection-start-line="118" selection-end-line="119" selection-end-column="54" />
+        <state>
+          <caret line="72" column="73" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
+          <folding>
+            <element signature="method#connServer#0;class#ContactServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/General/General_Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester/UDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state>
           <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -358,18 +465,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state>
           <caret line="106" selection-start-line="106" selection-end-line="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gateway/Gateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
+        <state>
           <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding>
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
             <element signature="docComment;method#access_sendBytes#0;class#Gateway#0" />
             <element signature="method#access_sendBytes#0;class#Gateway#0" />
             <element signature="method#genDeviceID#0;class#Gateway#0" />
@@ -377,10 +482,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gateway/Processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="118" selection-start-line="118" selection-end-line="119" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/General/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="178" column="39" lean-forward="true" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
+        <state relative-caret-position="1656">
+          <caret line="174" column="43" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
           <folding>
             <element signature="docComment;method#Packet#1;class#Packet#0" />
             <element signature="method#Packet#1;class#Packet#0" />
@@ -399,16 +511,6 @@
             <element signature="method#getPacketFromClient#0;class#Packet#0" />
             <element signature="method#getIntFromBytes#0;class#Packet#0" />
             <element signature="method#getBytesFromInt#0;class#Packet#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gateway/ContactServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="72" column="73" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
-          <folding>
-            <element signature="method#connServer#0;class#ContactServer#0" />
           </folding>
         </state>
       </provider>

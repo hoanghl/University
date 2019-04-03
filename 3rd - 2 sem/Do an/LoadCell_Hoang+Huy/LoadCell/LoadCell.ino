@@ -2,65 +2,56 @@
 // The outer one loops among Big States
 // the inner one loops inside each Big state
 
-enum BigState {St_Timer, St_LoadCell, St_ServerConnected, St_NoWiFi};
-enum smallState {st_LoadCell_calibrate, st_LoadCell_getData};
 
-enum BigState   state, state_prev;
-enum smallState substate;
-
-
+enum State {St_NULL, St_Calibrate, St_ConnectionCheck, St_ReadSensor, St_Wait, St_LCD_Button,
+            St_Send,  St_SaveMem};
+enum State      state, prev_state;
 
 void setup() {
     Serial.begin(57600);
 
-
-    // setup things
+    // set up components
     LoadCell_setup();
-    if (WiFiInit()){
-      if (ThingSpeakConnect())
-        state = St_ServerConnected;
-      else 
-        Serial.println("Can't connect to ThingSpeak server");
-    }
-    else{
-      state = St_NoWiFi;
-    }
+    Connection_setup();
+    LCD_Button_setup();
+
     // init state
-    substate = st_LoadCell_calibrate;
+    state       = St_Calibrate;
+    prev_state  = St_NULL;
 }
+
 
 void loop() {
-    switch (state)
-    {
-        case St_NoWiFi:
+    switch (state) {
+        case St_Calibrate: {
+            Calibrate();
             break;
-        case St_ServerConnected:
-            state = St_LoadCell;
+        }
+        case St_ConnectionCheck: {
+            ConnectionCheck();
             break;
-        case St_LoadCell:
-            switch (substate)
-            {
-                case st_LoadCell_calibrate:
-                    LoadCell_calibrate();
-                    break;
-                case st_LoadCell_getData:
-                    SendThingSpeak((int)LoadCell_getData());
-                    break;
-            }
+        }
+        case St_ReadSensor: {
+            ReadSensor();
             break;
-        case St_Timer:
-            State_Timer();
+        }
+        case St_Wait: {
+            Wait();
             break;
-
-        default:
+        }
+        case St_LCD_Button: {
+            LCD_Button();
             break;
+        }
+        case St_Send: {
+            Send();
+            break;
+        }
+        case St_SaveMem: {
+            SaveMem();
+            break;
+        }
     }
-    delay(10);    
-}
 
-
-void State_Timer() {
-    if (isTimerUp()) {
-        state = state_prev;
-    }
+    delay(10);
 }

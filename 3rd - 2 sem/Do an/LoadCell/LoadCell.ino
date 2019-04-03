@@ -14,8 +14,10 @@ void setup() {
     Serial.begin(57600);
 
 
-    // setup things
+    // setup components
     LoadCell_setup();
+    LCD_Button_setup();
+
 
     // init state
     state = St_LoadCell;
@@ -45,7 +47,6 @@ void loop() {
     }
     delay(10);    
 }
-
 
 void State_Timer() {
     if (isTimerUp()) {

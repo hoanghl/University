@@ -10,7 +10,7 @@ bool    scaleZero = false;
 
 void LoadCell_setup() {
     scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
-    scale.set_scale(eeGetFloat());                            // get offset saved in EEPROM
+    scale.set_scale(eeGetCalibrate());                            // get offset saved in EEPROM
 }
 
 void LoadCell_calibrate() {
@@ -46,7 +46,7 @@ void LoadCell_calibrate() {
         }
 
         // write to EEPROM
-        eeWriteFloat(scale.get_scale());
+        eeWriteCalibrate(scale.get_scale());
 
         // notify to screen
         Serial.print("Calibrating complete. The weight: ");
