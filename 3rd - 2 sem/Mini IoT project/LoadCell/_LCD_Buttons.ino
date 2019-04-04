@@ -1,7 +1,16 @@
 //Nhớ cài thư viện LiquidCrystal_I2C.h vô arduino thì mới chạy đc nha
 #include <LiquidCrystal_I2C.h>
 
+#include "General_Resources.hpp"
+
 LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+
+
+// enum Speed {Lv1: 10, Lv2: 15, Lv3: 20, Lv4: 30};
+// enum Speed speed;
+
+int Speed = 0;
 
 /*
  *MBut là địa chỉ chân của nút ViewMode
@@ -24,11 +33,13 @@ int val = LOW;
 
 int StartStopVal    = 1;                        // Start/stop value có giá trị 1(stop) hoặc 2(start)
 int ViewMode        = 0;                        // Có 2 loại ViewMode (1 và 2)
-int Speed           = 0;                        // Speed Level
 
-int weight = 0;                                 // Biến Weight lưu khối lượng của trái vừa được cân
 
-void LCD_Button()
+extern int newly_data;                          // Biến Weight lưu khối lượng của trái vừa được cân
+extern int n_apples;
+extern enum SubState sub_state;
+
+void LCD_Button1()
 {
     if (isButtonPressed (SSBut))                //Nếu nút Start/Stop ở chân SSBut được tích cực bậc cao 
         StartStop();                            //Thì gọi hàm StartStop
@@ -49,6 +60,9 @@ void LCD_Button()
 
     if (isButtonPressed (CBut))                 //Nếu nút Calib ở chân CBut được tích cực bậc cao 
     {
+        sub_state = st_calib_noload;
+
+        
         lcd.setCursor(2, 0);
         lcd.print("Calibrating");
         lcd.setCursor(6, 0);
@@ -58,8 +72,28 @@ void LCD_Button()
         lcd.print("Calibration");
         lcd.setCursor(4, 1);
         lcd.print("Complete");
+
+        
     }
 }
+
+
+
+// for testing only
+void LCD_Button() {
+    if (prev_state == St_ReadSensor) {
+        prev_state = state;
+        state = St_ConnectionCheck;
+    }
+    else
+    {
+        state = St_Wait;
+    }
+    
+}
+// end testing
+
+
 
 // Setup ban đầu cho LCD, xuất ra màn hình "Welcome!" 
 // Lưu ý địa chỉ bus ic là 0x27 nếu thay đổi địa chỉ ic thì vào LCD_and_Buttons.h sửa lại
@@ -89,7 +123,7 @@ void ViewMode1 ()
     lcd.setCursor(0,0); 
     lcd.print("Weight:");
     lcd.setCursor(8,0); 
-    lcd.print(weight);
+    lcd.print(newly_data);
     lcd.setCursor(12,0); 
     lcd.print("Kg");
 }
@@ -100,7 +134,7 @@ void ViewMode2 ()
     lcd.setCursor(0,0); 
     lcd.print("Count:");
     lcd.setCursor(7,0); 
-    lcd.print(count);
+    lcd.print(n_apples);
     lcd.setCursor(11,0); 
     lcd.print("Unit");
 }
@@ -299,14 +333,15 @@ void SpeedDown ()
 
 void Reset ()
 {
-    count = 0;
+    n_apples = 0;
+
     lcd.begin(16,2);
     lcd.setCursor(6,0); 
     lcd.print("Reset");
     lcd.setCursor(0,1); 
     lcd.print("Count:");
     lcd.setCursor(7,1); 
-    lcd.print(count);
+    lcd.print(n_apples);
     lcd.setCursor(11,1); 
     lcd.print("Unit");
 }

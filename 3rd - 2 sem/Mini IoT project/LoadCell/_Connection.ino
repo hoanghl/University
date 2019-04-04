@@ -24,15 +24,48 @@ extern int  newly_data;
  *  Send to ThingSpeak: send newly weighted data and the ones stored in EEPROM if exist
  */ 
 void Send(){
-    
+    // send newly weighted data
+    sendToThingSpeak(newly_data);
+
+    // send data in memory if exist
+    if (getNSavedData() != 0) {
+        int *saved_data = getSavedData();
+        for (int i = 0; i < getNSavedData(); i++)
+            sendToThingSpeak(saved_data[i]);
+    }
 
     client.stop();
+
+    setTimer(1);
+    startTimer();
+    state = St_Wait;
 }
 
 
 void    Connection_setup() {
-    WiFi.begin(ssid, password);
+    // WiFi.mode(WIFI_OFF);
+    // delay(1000);
+    // WiFi.begin(ssid, password);
+    // Serial.println("begin SSID and password");
+
     WiFi.mode(WIFI_OFF);
+  delay(1000);
+  
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting");
+  
+
+  
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+    Serial.println("");
+    Serial.print("Connected to ");
+    Serial.println(ssid);
+    Serial.print("IP address: ");
+    Serial.println(WiFi.localIP());
+    
 }
 
 void    ConnectionCheck() {
@@ -43,11 +76,11 @@ void    ConnectionCheck() {
             state = St_SaveMem;        
         else {
             // connection establised successfully
-            Serial.println(" * WiFi connection:")
+            Serial.println(" * WiFi connection:");
             Serial.print(ssid);
             Serial.print("  --  ");
             Serial.println(WiFi.localIP());
-            Serial.println(" * ThingSpeak connection: Established")
+            Serial.println(" * ThingSpeak connection: Established");
         
             state = St_Send;
         }

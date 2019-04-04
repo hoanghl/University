@@ -2,55 +2,64 @@
 // The outer one loops among Big States
 // the inner one loops inside each Big state
 
-
-enum State {St_NULL, St_Calibrate, St_ConnectionCheck, St_ReadSensor, St_Wait, St_LCD_Button,
-            St_Send,  St_SaveMem};
-enum State      state, prev_state, p_prev_State;
-
-int newly_data = 0;                           // store newly weighted data, used in many .ino files
-
+#include "General_Resources.hpp"
+           
 
 void setup() {
     Serial.begin(57600);
 
+    Serial.println("Start setting up");
     // set up components
     LoadCell_setup();
+    Serial.println("LoadCell set up done");
     Connection_setup();
-    LCD_Button_setup();
+    Serial.println("Connection set up done");
+
+    
+    //LCD_Button_setup();
+    Serial.println("all done");
 
     // init state
     state       = St_Calibrate;
     prev_state  = St_NULL;
+    sub_state = st_calib_noload;
 }
 
 
 void loop() {
     switch (state) {
         case St_Calibrate: {
+            Serial.println("on St_Calibrate");
             Calibrate();
             break;
         }
         case St_ConnectionCheck: {
+            Serial.println("on St_ConCheck");
             ConnectionCheck();
             break;
         }
         case St_ReadSensor: {
+            Serial.println("on ReadSensor");
             ReadSensor();
             break;
         }
         case St_Wait: {
+            Serial.println("on Wait");
             Wait();
             break;
         }
         case St_LCD_Button: {
+            Serial.println("on LCD");
             LCD_Button();
             break;
         }
         case St_Send: {
+            Serial.println("on Send");
             Send();
             break;
         }
         case St_SaveMem: {
+            Serial.println("on SaveMem");
             SaveMem();
             break;
         }

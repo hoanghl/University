@@ -3,5 +3,5 @@ ConnectionCheck():  _Connection.ino     ok
 ReadSensor():       _LoadCell.ino       ok
 Wait():             _Timer.ino          ok
 LCD_Button():       _LCD_Buttons.ino
-Send():             _Connection.ino
+Send():             _Connection.ino     ok
 SaveMem():          _EEPROM.ino         ok

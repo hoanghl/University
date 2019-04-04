@@ -8,16 +8,13 @@ const int LOADCELL_SCK_PIN  = 14;
 
 HX711 scale;
 
-extern enum State   state, prev_state, p_prev_State;
-extern int          newly_data;
 
-// private variables
-enum SubState {st_calib_noload, st_calib, st_calib_wait} sub_state = st_calib_noload;
+extern int          newly_data;
+extern int          n_apples;
 
 
 void    LoadCell_setup() {
     scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
-    scale.set_scale(eeGetCalibrate());                            // get offset saved in EEPROM
 }
 
 
@@ -37,6 +34,8 @@ void    Calibrate() {
                 Serial.println("The process will start within 10 seconds");
 
                 sub_state = st_wait;
+                setTimer(10);
+                startTimer();
                 break;
             }
             case st_wait: {
@@ -102,7 +101,8 @@ void    ReadSensor() {
     }
 
     newly_data = (int)reading;
+    n_apples++;
 
-    state_prev = state;
+    prev_state = state;
     state = St_LCD_Button;
 }

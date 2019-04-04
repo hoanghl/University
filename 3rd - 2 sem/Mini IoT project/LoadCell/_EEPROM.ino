@@ -14,9 +14,11 @@
 const int   EEPROM_isCalib      = 0;                     // position of isCalib
 const int   EEPROM_CalibAddr    = 1;                     // first position of Calibration index
 const int   EEPROM_DatAddr      = 4;                     // first position of Data
-bool        isDataInMem         = false;                 // check whether data are stored in EEPROM
 
 int         nDataInMem          = 0;                     // number of weighted numbers saved in EEPROM
+
+//extern variables
+extern int  newly_data;
 
 /**
  *  Write calibrated index to EEPROM
@@ -59,10 +61,10 @@ bool        isCalibrated() {
  *  @params values - int array
  *          data_size - no. elements in array
  */ 
-void        SaveMem(int value) {
+void        SaveMem() {
     int pos = EEPROM_DatAddr + nDataInMem * 4;
 
-    byte* p = (byte*) &value;
+    byte* p = (byte*) &newly_data;
 
     EEPROM.write(pos, *p);
     EEPROM.write(pos + 1, *(p + 1));
