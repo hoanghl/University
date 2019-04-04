@@ -1,3 +1,6 @@
+
+extern enum State   state;
+
 bool    isTimerOn = false;
 unsigned int times = 0;
 long int timePrev = 0, timeCur = 0;
@@ -7,10 +10,6 @@ bool    getTimerState() {
     return isTimerOn;
 }
 
-/**
- * Assign the project to an employee.
- * @params t - The employee who is responsible for the project.
- */
 void    setTimer(unsigned int t) {
     times = t * 1000;
 }
@@ -25,7 +24,7 @@ void    startTimer() {
     }
 }
 
-bool    isTimerUp() {
+bool    isTimeOut() {
     if (millis() - timePrev >= times) 
     {
         isTimerOn = false;
@@ -36,3 +35,18 @@ bool    isTimerUp() {
         return false;
     }
 }
+
+
+/**
+ *  Very important state, 
+ *  an alternative solution for delay()
+ */ 
+void    Wait() {
+    if (isTimeOut())
+        state = St_ReadSensor;
+    else
+    {
+        state = St_LCD_Button;
+    }
+    
+} 
