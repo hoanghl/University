@@ -1,4 +1,4 @@
-//Nhớ cài thư viện LiquidCrustal_I2C.h vô arduino thì mới chạy đc nha
+//Nhớ cài thư viện LiquidCrystal_I2C.h vô arduino thì mới chạy đc nha
 #include <LiquidCrystal_I2C.h>
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);

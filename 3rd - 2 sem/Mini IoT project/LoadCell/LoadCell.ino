@@ -5,7 +5,10 @@
 
 enum State {St_NULL, St_Calibrate, St_ConnectionCheck, St_ReadSensor, St_Wait, St_LCD_Button,
             St_Send,  St_SaveMem};
-enum State      state, prev_state;
+enum State      state, prev_state, p_prev_State;
+
+int newly_data = 0;                           // store newly weighted data, used in many .ino files
+
 
 void setup() {
     Serial.begin(57600);
