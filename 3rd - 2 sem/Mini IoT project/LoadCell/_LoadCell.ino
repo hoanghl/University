@@ -33,6 +33,7 @@ void    Calibrate() {
                 Serial.println("Please put the smartphone onto the sensor.");
                 Serial.println("The process will start within 10 seconds");
 
+
                 sub_state = st_wait;
                 setTimer(10);
                 startTimer();
@@ -57,6 +58,13 @@ void    Calibrate() {
                 }
 
                 // write to EEPROM
+                
+                // Testing
+                Serial.print("Scale before set: "); Serial.println(scale.get_scale());                
+                // End Testing
+
+
+
                 eeWriteCalibrate(scale.get_scale());
 
                 // notify onto screen
@@ -83,7 +91,18 @@ void    Calibrate() {
         }
     }
     else {  // prev_state == St_NULL && isCalib()
+        
+
+        // Testing
+        Serial.print("Get from EEPROM: "); Serial.println(eeGetCalibrate());
+        // End Testing
+
+
+
         scale.set_scale(eeGetCalibrate());
+
+        prev_state = state;
+        state = St_ConnectionCheck;
     }
 }
 
@@ -91,18 +110,32 @@ void    Calibrate() {
  *  Read data from LoadCell
  */ 
 void    ReadSensor() {
-    long reading;
-    if (scale.is_ready()) {
-        reading = scale.get_units(5);
-        Serial.print("HX711 reading: ");
-        Serial.println((int)reading);
-    } else {
-        Serial.println("HX711 not found.");
+    switch (sub_state) {
+        case st_readSensor: {
+            if (scale.is_ready()) {
+                long reading = scale.get_units(5);
+                Serial.print("HX711 reading: ");
+                Serial.println((int)reading);
+
+                newly_data = (int)reading;
+                n_apples++;
+
+                prev_state = state;
+                state = St_LCD_Button;
+            } else {
+                Serial.println("HX711 not found. Try again...");
+                
+                sub_state = st_wait; 
+                setTimer(1);
+                startTimer();
+            }
+            break;
+        }
+        case st_wait: {
+            if (isTimeOut())
+                sub_state = st_readSensor;
+            break;
+        }
     }
-
-    newly_data = (int)reading;
-    n_apples++;
-
-    prev_state = state;
-    state = St_LCD_Button;
+       
 }

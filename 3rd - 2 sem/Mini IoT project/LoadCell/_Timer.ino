@@ -42,8 +42,10 @@ bool    isTimeOut() {
  *  an alternative solution for delay()
  */ 
 void    Wait() {
-    if (isTimeOut())
+    if (isTimeOut()) {
         state = St_ReadSensor;
+        sub_state = st_readSensor;
+    }
     else
     {
         state = St_LCD_Button;

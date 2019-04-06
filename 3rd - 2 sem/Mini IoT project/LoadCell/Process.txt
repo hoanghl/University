@@ -1,4 +1,4 @@
 Testing other modules except LCD_Button
 Error:
-    Connect_Setup
-    SaveMem: flow not correct
+    LCD_setup not response
+    ThingSpeak server is fragile

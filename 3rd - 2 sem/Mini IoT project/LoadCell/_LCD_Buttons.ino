@@ -7,11 +7,6 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 
 
-// enum Speed {Lv1: 10, Lv2: 15, Lv3: 20, Lv4: 30};
-// enum Speed speed;
-
-int Speed = 0;
-
 /*
  *MBut là địa chỉ chân của nút ViewMode
  *SSBut là địa chỉ chân nút Start/Stop
@@ -31,7 +26,7 @@ int SpeedPin    = D3;
 int pre = LOW;
 int val = LOW;
 
-int StartStopVal    = 1;                        // Start/stop value có giá trị 1(stop) hoặc 2(start)
+bool isStarted      = false;                    // Start/stop value có giá trị 1(stop) hoặc 2(start)
 int ViewMode        = 0;                        // Có 2 loại ViewMode (1 và 2)
 
 
@@ -172,21 +167,7 @@ void processView (int &a)
 
 void printSpeed (int Speed)
 {
-    if (Speed == 0)
-    {
-        lcd.begin(16,2);
-        lcd.setCursor(4,0); 
-        lcd.print("STOPPED");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
-    }
-    else if (Speed == 63)
+    if (Speed == Lv1)
     {
         lcd.begin(16,2);
         lcd.setCursor(3,0); 
@@ -202,7 +183,7 @@ void printSpeed (int Speed)
         lcd.setCursor(15,1); 
         lcd.print('|');
     }
-    else if (Speed == 127)
+    else if (Speed == Lv2)
     {
         lcd.begin(16,2);
         lcd.setCursor(3,0); 
@@ -218,7 +199,7 @@ void printSpeed (int Speed)
         lcd.setCursor(15,1); 
         lcd.print('|');
     }
-    else if (Speed == 191)
+    else if (Speed == Lv3)
     {
         lcd.begin(16,2);
         lcd.setCursor(3,0); 
@@ -234,7 +215,7 @@ void printSpeed (int Speed)
         lcd.setCursor(15,1); 
         lcd.print('|');
     }
-    else if (Speed == 255)
+    else if (Speed == Lv4)
     {
         lcd.begin(16,2);
         lcd.setCursor(3,0); 
@@ -249,85 +230,129 @@ void printSpeed (int Speed)
         lcd.print('|');
         lcd.setCursor(15,1); 
         lcd.print('|');
-    }
-    else
+    }  
+}
+
+void StartStop ()
+{
+    if (isStarted == false)
+        isStarted = true;
+    else if (isStarted == true)
+        isStarted = false;
+
+    if (isStarted == false)
     {
+        lcd.begin(16,2);
+          lcd.setCursor(4,0); 
+          lcd.print("STOPPED");
+          lcd.setCursor(3,1); 
+          lcd.print('|');
+          lcd.setCursor(7,1); 
+          lcd.print('|');
+          lcd.setCursor(11,1); 
+          lcd.print('|');
+          lcd.setCursor(15,1); 
+          lcd.print('|');
+    }
+    else if (isStarted == true)
+    {
+        printSpeed (Speed);
+    }
+}
+
+void SpeedUp ()
+{
+    if (isStarted == false)        // check nếu động cơ chưa Start thì ko speed up
+    {    
         lcd.begin(16,2);
         lcd.setCursor(1,0); 
         lcd.print("Engine Has Not");
         lcd.setCursor(2,1); 
         lcd.print("Started Yet!");
     }
-    
-}
-
-void StartStop ()
-{
-    if (StartStopVal == 2)
-        StartStopVal = 0;
-    StartStopVal ++;
-    
-    if (StartStopVal == 1)
-    {
-        Speed = 0;
-    }
     else
     {
-        Speed = 63;
-    }
-    printSpeed (Speed);
-    analogWrite(SpeedPin, Speed);
-}
-
-void SpeedUp ()
-{
-    if (Speed == 255)
-    {
-        lcd.begin(16,2);
-        lcd.setCursor(1,0); 
-        lcd.print("Top-SPEED: 4/4");
-        lcd.setCursor(0,1); 
-        lcd.print("################");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
-    }
-    else
-    {
-        Speed += 64;
-        printSpeed (Speed);        
-        analogWrite(SpeedPin, Speed);
+        
+      if (Speed == Lv4)
+      {
+          lcd.begin(16,2);
+          lcd.setCursor(1,0); 
+          lcd.print("Top-SPEED: 4/4");
+          lcd.setCursor(0,1); 
+          lcd.print("################");
+          lcd.setCursor(3,1); 
+          lcd.print('|');
+          lcd.setCursor(7,1); 
+          lcd.print('|');
+          lcd.setCursor(11,1); 
+          lcd.print('|');
+          lcd.setCursor(15,1); 
+          lcd.print('|');
+      }
+      else
+      {
+          if (Speed == Lv1)
+          {
+            Speed = Lv2;
+          }
+          else if (Speed == Lv2)
+          {
+            Speed = Lv3;
+          }
+          else if (Speed == Lv3)
+          {
+            Speed = Lv4;
+          }
+          printSpeed (Speed);        
+      }
     }
 }
 
 void SpeedDown ()
 { 
-    if (Speed == 63)
-    {
+    if (isStarted == false)        // check nếu động cơ chưa Start thì ko speed down
+    {    
         lcd.begin(16,2);
         lcd.setCursor(1,0); 
-        lcd.print("Min-SPEED: 1/4");
-        lcd.setCursor(0,1); 
-        lcd.print("####");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
+        lcd.print("Engine Has Not");
+        lcd.setCursor(2,1); 
+        lcd.print("Started Yet!");
     }
     else
-    { 
-        Speed -= 64;
-        printSpeed (Speed);
-        analogWrite(SpeedPin, Speed);
+    {
+        
+      if (Speed == Lv1)
+      {
+          lcd.begin(16,2);
+          lcd.setCursor(1,0); 
+          lcd.print("Min-SPEED: 1/4");
+          lcd.setCursor(0,1); 
+          lcd.print("####");
+          lcd.setCursor(3,1); 
+          lcd.print('|');
+          lcd.setCursor(7,1); 
+          lcd.print('|');
+          lcd.setCursor(11,1); 
+          lcd.print('|');
+          lcd.setCursor(15,1); 
+          lcd.print('|');
+      }
+      else
+      {
+          if (Speed == Lv4)
+          {
+            Speed = Lv3;
+          }
+          else if (Speed == Lv3)
+          {
+            Speed = Lv2;
+          }
+          else if (Speed == Lv2)
+          {
+            Speed = Lv1;
+          }
+          printSpeed (Speed);        
+      }
     }
 }
 
