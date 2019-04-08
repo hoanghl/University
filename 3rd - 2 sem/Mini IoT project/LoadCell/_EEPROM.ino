@@ -7,13 +7,17 @@
 /**
  *   The format of EEPROM is as follows:
  *      0th -> 3rd byte     : contains calibrated value
- *      4th byte            : no. data saved in EEPROM
- *      from 5th byte       : contains weighted data
+ *      4th byte            : position of head of queue of data
+ *      5th byte            : position of data of queue of data
+ *      from 6th byte       : store data
+ * 
+ * => no. data stored = (tail - head) / 4
  */
 
 const int   EEPROM_CalibAddr    = 0;                     // first position of Calibration index
-const int   EEPROM_NDat         = 4;                     // byte containing no. data saved in EEPROM
-const int   EEPROM_DatAddr      = 5;                     // first position of Data
+const int   EEPROM_Head         = 4;                     // head byte
+const int   EEPROM_Tail         = 5;                     // tail byte
+const int   EEPROM_StartData    = 6;                     // the position of the first byte of data
 
 
 //extern variables
@@ -67,7 +71,8 @@ bool        isCalibrated() {
  *  Check whether weighted data are stored in EEPROM by checking 4th byte
  */ 
 bool        isDataInEEPR() {
-    return EEPROM.read(EEPROM_NDat) != 0;
+    Serial.print("isDataInEEPR: "); Serial.println(getNSavedData());
+    return getNSavedData() != 0;
 }
 
 
@@ -77,12 +82,8 @@ bool        isDataInEEPR() {
  *          data_size - no. elements in array
  */ 
 void        SaveMem() {
-    // update no. data
-    byte nDataInMem = getNSavedData() + 1;
-    EEPROM.write(EEPROM_NDat, nDataInMem);
-
     // write newly data from LoadCell
-    int pos = EEPROM_DatAddr + (nDataInMem - 1) * 4;          // calculate position of byte to write
+    int pos = (int)getTail();                        // get position of byte to write
 
     byte* p = (byte*) &newly_data;
 
@@ -90,12 +91,16 @@ void        SaveMem() {
     EEPROM.write(pos + 1, *(p + 1));
     EEPROM.write(pos + 2, *(p + 2));
     EEPROM.write(pos + 3, *(p + 3));
+
+    // update tail postion
+    EEPROM.write(EEPROM_Tail, getTail() + 4);
+
     EEPROM.commit();
 
-    Serial.print("nDataInMem in savemem: "); Serial.println(nDataInMem);
+    Serial.print("no.data in savemem: "); Serial.println(getNSavedData());
 
-    state = St_LCD_Button;
-    setTimer(5);
+    state = St_Wait;
+    setTimer((int)Speed);
     startTimer();
 }
 
@@ -104,26 +109,22 @@ void        SaveMem() {
  *  Get number of weighted data stored in EEPROM
  *  @return int - number of weighted data
  */
-byte         getNSavedData() {
-    return EEPROM.read(EEPROM_NDat);
+int         getNSavedData() {
+    return EEPROM.read((getTail() - getHead()) / 4);
 }
+
+
 /**
  *  Get weighted values stored in EEPROM
  *  @return -1: no data in EEPROM
  *          positive number: number from EEPROM
  */
 int        getSavedData() {
-    byte nDataInMem = getNSavedData();
-    if (nDataInMem == 0)
+    if (!isDataInEEPR())
         return -1;
-    EEPROM.write(EEPROM_NDat, nDataInMem - 1);
-    EEPROM.commit();
-
-    Serial.print("nDataInMem in getSaved: "); Serial.println(getNSavedData());
-
     
 
-    int pos = EEPROM_DatAddr + (nDataInMem - 1) * 4;
+    int pos = (int)getHead();
     int tmp = 0;
     byte *p = (byte *) &tmp;
     *p          = EEPROM.read(pos);
@@ -131,5 +132,24 @@ int        getSavedData() {
     *(p + 2)    = EEPROM.read(pos + 2);
     *(p + 3)    = EEPROM.read(pos + 3);
 
+    byte head = getHead() + 4, tail = getTail();
+
+    if (head == tail)
+        head = tail = EEPROM_StartData;
+    EEPROM.write(EEPROM_Head, head);
+    EEPROM.write(EEPROM_Tail, tail);
+    EEPROM.commit();
+
+    Serial.print("no.data in savemem: "); Serial.println(getNSavedData());
+
     return tmp;
+}
+
+
+byte        getHead() {
+    return EEPROM.read(EEPROM_Head);
+}
+
+byte        getTail() {
+    return EEPROM.read(EEPROM_Tail);
 }

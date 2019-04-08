@@ -5,9 +5,9 @@ int     newly_data = 0;         // store newly weighted data, used in many .ino 
 int     n_apples   = 0;         // no. apples weighted
 
 // for states
-enum State {St_NULL, St_Calibrate, St_ConnectionCheck, St_ReadSensor, St_Wait, St_LCD_Button,
+enum State {St_Greeting, St_Calibrate, St_ConnectionCheck, St_ReadSensor, St_Wait, St_LCD_Button,
             St_Send,  St_SaveMem};
-enum State   state, prev_state, p_prev_State;
+enum State   state, prev_state;
 
 enum SubState {st_calib_noload, st_calib, st_wait,          // for Calibrate state
                st_readSensor,                               // for ReadSensor state

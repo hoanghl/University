@@ -15,77 +15,77 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
  *CBut là địa chỉ chân nút calibate
  *SpeedPin là địa chỉ của chân điều khiển tốc độ băng chuyền
  */
-int VBut        = D0;
-int SSBut       = D4;
-int SDBut       = D7;
-int SUBut       = D8;
-int RBut        = D9;
-int CBut        = D10;
-int SpeedPin    = D3;
 
-int pre = LOW;
-int val = LOW;
+typedef enum {Bt_NoPress, Bt_StaSto, Bt_SpDown, Bt_SpUp, Bt_Reset, Bt_Calib, Bt_View} Button;
 
-bool isStarted      = false;                    // Start/stop value có giá trị 1(stop) hoặc 2(start)
-int ViewMode        = 0;                        // Có 2 loại ViewMode (1 và 2)
+
+bool    isStarted   = false;                   // Start/stop value có giá trị 1(stop) hoặc 2(start)
+int     ViewMode    = 0;                       // Có 2 loại ViewMode (1 và 2)
 
 
 extern int newly_data;                          // Biến Weight lưu khối lượng của trái vừa được cân
 extern int n_apples;
 extern enum SubState sub_state;
 
-void LCD_Button1()
+Button whichButPressed ();
+
+void LCD_Button()
 {
-    if (isButtonPressed (SSBut))                //Nếu nút Start/Stop ở chân SSBut được tích cực bậc cao 
-        StartStop();                            //Thì gọi hàm StartStop
-
-    if (isButtonPressed (SDBut))                //Nếu nút SpeedDown ở chân SDBut được tích cực bậc cao 
-        SpeedDown ();                           //Thì tốc độ được giảm đi 64 (Lưu ý: NodeMCU hỗ trợ chân PCM mô phỏng tín hiệu analog theo 256 
-                                                //trạng thái từ 0 - 255, nên dãy tốc độ được chia thành 4 cấp, mỗi cấp cách nhau 64 trạng thái, 
-                                                //mỗi lần gọi hàm SpeedDown(), tốc độ sẽ giảm đi 64 trạng thái)
-
-    if (isButtonPressed (SUBut))                //Lần này là SpeedUp, tương tự như SpeedDown
-        SpeedUp ();
-
-    if (isButtonPressed (VBut))                 //Nếu nút ViewMode ở chân MBut được tích cực bậc cao 
-        processView (ViewMode);                 //Thì LCD sẽ chuyển giữa 2 chế độ xem: xem cân nặng từng trái và xem số trái cân được
-
-    if (isButtonPressed (RBut))                 //Nếu nút Reset ở chân RBut được tích cực bậc cao 
-        Reset ();                               //Thì reset count về 0
-
-    if (isButtonPressed (CBut))                 //Nếu nút Calib ở chân CBut được tích cực bậc cao 
+    switch (whichButPressed())
     {
-        sub_state = st_calib_noload;
+        case Bt_StaSto:
+            Serial.println("StaSto pressed");
+            StartStop();
+            break;
+        case Bt_SpUp:
+            Serial.println("SpeUp pressed");
+            SpeedUp();
+            break;
+        case Bt_SpDown:
+            Serial.println("SpeDo pressed");
+            SpeedDown();
+            break;
+        case Bt_Reset:
+            Serial.println("Reset pressed");
+            Reset();
+            break;
+        case Bt_View:
+            Serial.println("View pressed");
+            processView(ViewMode);
+            break;
+        case Bt_Calib:
+            Serial.println("Calib pressed");
+            
+            if (isStarted) {
+                prev_state = state;
+                state = St_Calibrate;
+                sub_state = st_calib_noload;
+                
+                return;
+            }
 
-        
-        lcd.setCursor(2, 0);
-        lcd.print("Calibrating");
-        lcd.setCursor(6, 0);
-        lcd.print("...");
-        Calibrate();                            //Thì gọi hàm calib
-        lcd.setCursor(2, 0);            
-        lcd.print("Calibration");
-        lcd.setCursor(4, 1);
-        lcd.print("Complete");
-
-        
+        default:
+            break;
     }
+
+    if (isStarted)
+        state = St_Wait;
 }
 
 
 
 // for testing only
-void LCD_Button() {
-    if (prev_state == St_ReadSensor) {
-        prev_state = state;
-        state = St_ConnectionCheck;
-    }
-    else
-    {
-        state = St_Wait;
-    }
+// void LCD_Button() {
+//     if (prev_state == St_ReadSensor) {
+//         prev_state = state;
+//         state = St_ConnectionCheck;
+//     }
+//     else
+//     {
+//         state = St_Wait;
+//     }
     
-}
+// }
 // end testing
 
 
@@ -93,24 +93,43 @@ void LCD_Button() {
 // Setup ban đầu cho LCD, xuất ra màn hình "Welcome!" 
 // Lưu ý địa chỉ bus ic là 0x27 nếu thay đổi địa chỉ ic thì vào LCD_and_Buttons.h sửa lại
 void LCD_Button_setup ()
-{
-    pinMode (D10, OUTPUT);
-    pinMode (D9, OUTPUT);
-    pinMode (D8, OUTPUT);
-    pinMode (D7, OUTPUT);
-    pinMode (D4, OUTPUT);
-    pinMode (D3, INPUT);
-    pinMode (LED_BUILTIN, OUTPUT);
-    
+{    
     lcd.begin(16,2);
     lcd.init();
     lcd.backlight();
 
+}
+
+void Greeting() {
     lcd.setCursor(2, 0);            
     lcd.print("SMART_SCALE");
     lcd.setCursor(4, 1);            
     lcd.print("WELCOME!");
+
+    prev_state = St_Greeting;
+    state = St_Wait;
+    setTimer(5);
+    startTimer();
 }
+
+
+
+
+void printCalib_doing() {
+    lcd.setCursor(2, 0);
+    lcd.print("Calibrating");
+    lcd.setCursor(6, 1);
+    lcd.print("...");
+}
+void printCalib_done() {
+    lcd.setCursor(2, 0);            
+    lcd.print("Calibration");
+    lcd.setCursor(4, 1);
+    lcd.print("Complete");
+}
+
+
+
 
 void ViewMode1 ()
 {
@@ -142,17 +161,24 @@ void choice (int a)
         ViewMode2 ();
 }
 
-bool isButtonPressed (int but)
+Button whichButPressed ()
 {
-    pre = val;
-    val = digitalRead (but);
-    
-    if (val == HIGH && pre == LOW)
-    { 
-        return true;
-    }
-    else
-        return false;
+    int tmp = analogRead(A0);
+
+    if (tmp >= 300 && tmp <= 340)
+        return Bt_StaSto;
+    if (tmp >= 355 && tmp <= 400)
+        return Bt_SpUp;;
+    if (tmp >= 415 && tmp <= 490)
+        return Bt_SpDown;
+    if (tmp >= 570 && tmp <= 630)
+        return Bt_Reset;
+    if (tmp >= 840 && tmp <= 890)
+        return Bt_View;
+    if (tmp == 1024)
+        return Bt_Calib;
+
+    return Bt_NoPress;
 }
 
 void processView (int &a)
@@ -167,79 +193,44 @@ void processView (int &a)
 
 void printSpeed (int Speed)
 {
-    if (Speed == Lv1)
+    lcd.begin(16,2);
+    lcd.setCursor(3,0);
+
+    switch (Speed)
     {
-        lcd.begin(16,2);
-        lcd.setCursor(3,0); 
-        lcd.print("SPEED: 1/4");
-        lcd.setCursor(0,1); 
-        lcd.print("####");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
+        case Lv1:
+            lcd.print("SPEED: 1/4");
+            break;
+        case Lv2:
+            lcd.print("SPEED: 2/4");
+            break;
+        case Lv3:
+            lcd.print("SPEED: 3/4");
+            break;
+        case Lv4:
+            lcd.print("SPEED: 4/4");
+            break;
+    
+        default:
+            break;
     }
-    else if (Speed == Lv2)
-    {
-        lcd.begin(16,2);
-        lcd.setCursor(3,0); 
-        lcd.print("SPEED: 2/4");
-        lcd.setCursor(0,1); 
-        lcd.print("########");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
-    }
-    else if (Speed == Lv3)
-    {
-        lcd.begin(16,2);
-        lcd.setCursor(3,0); 
-        lcd.print("SPEED: 3/4");
-        lcd.setCursor(0,1); 
-        lcd.print("############");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
-    }
-    else if (Speed == Lv4)
-    {
-        lcd.begin(16,2);
-        lcd.setCursor(3,0); 
-        lcd.print("SPEED: 4/4");
-        lcd.setCursor(0,1); 
-        lcd.print("################");
-        lcd.setCursor(3,1); 
-        lcd.print('|');
-        lcd.setCursor(7,1); 
-        lcd.print('|');
-        lcd.setCursor(11,1); 
-        lcd.print('|');
-        lcd.setCursor(15,1); 
-        lcd.print('|');
-    }  
+
+    lcd.setCursor(0,1); 
+    lcd.print("############");
+    lcd.setCursor(3,1); 
+    lcd.print('|');
+    lcd.setCursor(7,1); 
+    lcd.print('|');
+    lcd.setCursor(11,1); 
+    lcd.print('|');
+    lcd.setCursor(15,1); 
+    lcd.print('|'); 
 }
+
 
 void StartStop ()
 {
-    if (isStarted == false)
-        isStarted = true;
-    else if (isStarted == true)
-        isStarted = false;
-
+    isStarted = !isStarted;
     if (isStarted == false)
     {
         lcd.begin(16,2);
@@ -254,7 +245,7 @@ void StartStop ()
           lcd.setCursor(15,1); 
           lcd.print('|');
     }
-    else if (isStarted == true)
+    else
     {
         printSpeed (Speed);
     }

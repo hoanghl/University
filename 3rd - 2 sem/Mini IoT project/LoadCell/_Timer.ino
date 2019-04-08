@@ -1,5 +1,7 @@
+#include "General_Resources.hpp"
 
-extern enum State   state;
+
+
 
 bool    isTimerOn = false;
 unsigned int times = 0;
@@ -43,12 +45,15 @@ bool    isTimeOut() {
  */ 
 void    Wait() {
     if (isTimeOut()) {
-        state = St_ReadSensor;
-        sub_state = st_readSensor;
+        if (prev_state == St_Greeting) {
+            state = St_Calibrate;
+            sub_state = st_calib_noload;
+        }
+        else {
+            state = St_ReadSensor;
+            sub_state = st_readSensor;
+        }
     }
     else
-    {
-        state = St_LCD_Button;
-    }
-    
+        state = St_LCD_Button;    
 } 

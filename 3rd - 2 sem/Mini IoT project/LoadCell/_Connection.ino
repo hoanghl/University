@@ -28,14 +28,11 @@ int     posInMem    = 0;
 void Send(){
     switch (sub_state) {
         case st_send_new: {
-            // send newly weighted data
-            sendToThingSpeak(newly_data);
-            client.stop();
-            
             if (isDataInEEPR()) {
                 sub_state = st_send_inMem;
 
-                setTimer(20);
+                Serial.print("Speed = "); Serial.println((int)Speed);
+                setTimer((int)Speed);
                 startTimer();
                 sub_state = st_wait;
             }
@@ -53,7 +50,8 @@ void Send(){
 
                     client.stop();
 
-                    setTimer(20);
+                    Serial.print("Speed = "); Serial.println((int)Speed);
+                    setTimer((int)Speed);
                     startTimer();
                     sub_state = st_wait;
                 }
@@ -72,7 +70,13 @@ void Send(){
             break;
         }
         case st_send_done: {
-            setTimer(20);
+            // send newly weighted data
+            sendToThingSpeak(newly_data);
+            client.stop();
+            
+            Serial.print("Speed = "); Serial.println((int)Speed);
+            
+            setTimer((int)Speed);
             startTimer();
             state = St_Wait;
         }

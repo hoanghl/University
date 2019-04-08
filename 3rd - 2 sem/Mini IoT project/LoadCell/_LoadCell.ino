@@ -22,9 +22,13 @@ void    LoadCell_setup() {
  *  Calibrate LoadCell
  */
 void    Calibrate() {
-    if (prev_state == St_LCD_Button || !isCalibrated()) {
+    if (!isCalibrated() || prev_state == St_LCD_Button) {
         switch (sub_state) {
             case st_calib_noload: {
+                // print a message to LCD
+                printCalib_doing();
+
+
                 // calculate offset as no load
                 scale.set_scale();
                 scale.tare();
@@ -64,34 +68,25 @@ void    Calibrate() {
                 // End Testing
 
 
-
                 eeWriteCalibrate(scale.get_scale());
 
                 // notify onto screen
                 Serial.print("Calibrating complete. The weight: ");
                 Serial.println(scale.get_units(5));
 
-
                 // modify program flow
-                if (prev_state == St_LCD_Button) {
-                    if (p_prev_State == St_Wait) {
-                        state = St_Wait;
-                    }
-                    else {  // p_prev_State == St_ReadSensor
-                        prev_state = state;
-                        state = St_ConnectionCheck;
-                    }
-                }
-                else {  // prev_state == St_NULL
-                    prev_state = state;
-                    state = St_ConnectionCheck;
-                }
+                if (prev_state == St_LCD_Button)
+                    state = St_Wait;
+                else  // prev_state == St_Greeting
+                    state = St_LCD_Button;
+
+                // print a message to LCD
+                printCalib_done();
                 break;
             }
         }
     }
-    else {  // prev_state == St_NULL && isCalib()
-        
+    else {   //isCalibrated() == true
 
         // Testing
         Serial.print("Get from EEPROM: "); Serial.println(eeGetCalibrate());
@@ -103,7 +98,18 @@ void    Calibrate() {
 
         prev_state = state;
         state = St_ConnectionCheck;
+
+        // print a message to LCD
+        printCalib_done();
+
+
+        // modify program flow
+        if (prev_state == St_LCD_Button)
+            state = St_Wait;
+        else  // prev_state == St_Greeting
+            state = St_LCD_Button;
     }
+
 }
 
 /**
@@ -120,8 +126,9 @@ void    ReadSensor() {
                 newly_data = (int)reading;
                 n_apples++;
 
+                // modify program flow
                 prev_state = state;
-                state = St_LCD_Button;
+                state = St_ConnectionCheck;
             } else {
                 Serial.println("HX711 not found. Try again...");
                 

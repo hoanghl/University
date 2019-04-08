@@ -15,18 +15,21 @@ void setup() {
     Serial.println("LoadCell set up done");
     Connection_setup();
     Serial.println("Connection set up done");    
-    //LCD_Button_setup();
+    LCD_Button_setup();
     Serial.println("all done");
 
     // init state
     state       = St_Calibrate;
-    prev_state  = St_NULL;
     sub_state   = st_calib_noload;
 }
 
 
 void loop() {
     switch (state) {
+        case St_Greeting: {
+            Greeting();
+            break;
+        }
         case St_Calibrate: {
             //Serial.println("on St_Calibrate");
             Calibrate();
@@ -38,27 +41,27 @@ void loop() {
             break;
         }
         case St_ReadSensor: {
-            //Serial.println("on ReadSensor");
+            // Serial.println("on ReadSensor");
             ReadSensor();
             break;
         }
         case St_Wait: {
-            //Serial.println("on Wait");
+            // Serial.println("on Wait");
             Wait();
             break;
         }
         case St_LCD_Button: {
-            //Serial.println("on LCD");
+            // Serial.println("on LCD");
             LCD_Button();
             break;
         }
         case St_Send: {
-            //Serial.println("on Send");
+            // Serial.println("on Send");
             Send();
             break;
         }
         case St_SaveMem: {
-            Serial.println("on SaveMem");
+            // Serial.println("on SaveMem");
             SaveMem();
             break;
         }
