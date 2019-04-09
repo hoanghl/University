@@ -1,4 +1,4 @@
-Testing other modules except LCD_Button
-Error:
-    LCD_setup not response
-    ThingSpeak server is fragile
+The errors remain:
+    LCD sometime "##" not show correctly
+    St_Greeting not shown
+    Button sometime not recognized

@@ -72,6 +72,8 @@ bool        isCalibrated() {
  */ 
 bool        isDataInEEPR() {
     Serial.print("isDataInEEPR: "); Serial.println(getNSavedData());
+    Serial.print("at head: "); Serial.println(EEPROM.read(getHead()));
+    Serial.print("at tail: "); Serial.println(EEPROM.read(getTail()));
     return getNSavedData() != 0;
 }
 
@@ -83,7 +85,7 @@ bool        isDataInEEPR() {
  */ 
 void        SaveMem() {
     // write newly data from LoadCell
-    int pos = (int)getTail();                        // get position of byte to write
+    int pos = getTail();                        // get position of byte to write
 
     byte* p = (byte*) &newly_data;
 
@@ -110,7 +112,7 @@ void        SaveMem() {
  *  @return int - number of weighted data
  */
 int         getNSavedData() {
-    return EEPROM.read((getTail() - getHead()) / 4);
+    return (getTail() - getHead()) / 4;
 }
 
 
@@ -124,7 +126,7 @@ int        getSavedData() {
         return -1;
     
 
-    int pos = (int)getHead();
+    int pos = getHead();
     int tmp = 0;
     byte *p = (byte *) &tmp;
     *p          = EEPROM.read(pos);
