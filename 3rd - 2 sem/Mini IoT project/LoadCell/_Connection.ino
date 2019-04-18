@@ -4,8 +4,8 @@
 #include <ESP8266HTTPClient.h>
 
 
-const char *ssid             = "Home_BVD";    
-const char *password         = "360486d4tdt";
+const char *ssid             = "AndroidAP";    
+const char *password         = "nguyen12185";
 
 const char *ThingSpeakServer = "api.thingspeak.com";
 const int  ID                = 584123;                            // ThingSpeak Channel ID

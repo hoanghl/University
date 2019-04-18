@@ -52,7 +52,6 @@ void    Calibrate() {
             case st_calib: {
                 Serial.println("Start.");
                 Serial.print("Please type the weight of the object: ");
-                Serial.setTimeout(5000);
                 int weight = Serial.readStringUntil('\n').toInt();
                 Serial.println(weight);
 

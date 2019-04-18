@@ -200,23 +200,29 @@ void printSpeed (int Speed)
     {
         case Lv1:
             lcd.print("SPEED: 1/4");
+            lcd.setCursor(0,1); 
+            lcd.print("####");  
             break;
         case Lv2:
             lcd.print("SPEED: 2/4");
+            lcd.setCursor(0,1); 
+            lcd.print("########");  
             break;
         case Lv3:
             lcd.print("SPEED: 3/4");
+            lcd.setCursor(0,1); 
+            lcd.print("############");
             break;
         case Lv4:
             lcd.print("SPEED: 4/4");
+            lcd.setCursor(0,1); 
+            lcd.print("################");
             break;
     
         default:
             break;
     }
 
-    lcd.setCursor(0,1); 
-    lcd.print("############");
     lcd.setCursor(3,1); 
     lcd.print('|');
     lcd.setCursor(7,1); 

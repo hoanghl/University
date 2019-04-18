@@ -21,6 +21,9 @@ void setup() {
     // init state
     state       = St_Calibrate;
     sub_state   = st_calib_noload;
+
+    // set up watchdog 1s
+    // 5ph k can --> sleep
 }
 
 
