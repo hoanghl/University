@@ -1,14 +1,14 @@
 CC=g++
-CFLAGS=-c -Wall -lmraa
-LDFLAGS=-lmraa
-SOURCES=SparkFun_9DOF_main.cpp SFE_LSM9DS0.cpp
-OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=EdisonV3
+CFLAGS=-g -c -Wall
 
-all: $(SOURCES) $(EXECUTABLE)
+all: SFE_LSM9DS0.o SparkFun_9DOF_main.o
+	$(CC) -o EdisonV3 SFE_LSM9DS0.o SparkFun_9DOF_main.o -lmraa
 
-$(EXECUTABLE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+SFE_LSM9DS0.o: SFE_LSM9DS0.cpp SFE_LSM9DS0.h
+	$(CC) $(CFLAGS) SFE_LSM9DS0.cpp -lmraa
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
+SparkFun_9DOF_main.o: SparkFun_9DOF_main.cpp SFE_LSM9DS0.h
+	$(CC) $(CFLAGS) SparkFun_9DOF_main.cpp -lmraa
+
+clean:
+	rm -rf *.o EdisonV3

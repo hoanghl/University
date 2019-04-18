@@ -1,0 +1,14 @@
+CC=g++
+CFLAGS=-c -Wall -lmraa
+LDFLAGS=-lmraa
+SOURCES=SparkFun_9DOF_main.cpp SFE_LSM9DS0.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=EdisonV3
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@

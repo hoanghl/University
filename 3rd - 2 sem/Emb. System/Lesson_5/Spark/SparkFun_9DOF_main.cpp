@@ -23,15 +23,42 @@ Distributed as-is; no warranty is given.
 
 #include <iostream>
 #include <unistd.h>
+#include <cmath>
+
 #include "SFE_LSM9DS0.h"
+
+#define     EPSILON     0.05
+#define     DELTA       10
+#define     GAMMA       5
+
+#define     PI          3.14159265
+#define     TIME        0.01
+
+int usleep_time = (int)(TIME * 1000000);
+
 using namespace std;
 
-enum MOTION {STILL, WALK, SIT} motion;
+enum MOTION {STILL, WALK, SIT, STAND} motion;
 
-enum MOTION getMotion();
+enum MOTION getMotion(float X, float Y, float Z, float Xp, float Yp, float Zp);
+
+float gyroX = 0;
+float gyroY = 0;
+float gyroZ = 0;
+
 
 int main()
 {
+    float angleX = 0;
+    float angleY = 0;
+    float angleZ = 0;
+
+    float prev_angleX = 0;
+    float prev_angleY = 85;
+    float prev_angleZ = 0;
+
+    int dt = 0;
+
     LSM9DS0 *imu;
     imu = new LSM9DS0(0x6B, 0x1D);
     // The begin() function sets up some basic parameters and turns the device
@@ -65,7 +92,7 @@ int main()
 
     // Loop and report data
     while (1)
-    {
+    {            
         // First, let's make sure we're collecting up-to-date information. The
         //    sensors are sampling at 100Hz (for the accelerometer, magnetometer, and
         //    temp) and 95Hz (for the gyro), and we could easily do a bunch of
@@ -95,8 +122,8 @@ int main()
         //    easily enough from an internal register on the part. There are functions
         //    to check for overflow per device.
         overflow = imu->xDataOverflow() | 
-                             imu->gDataOverflow() | 
-                             imu->mDataOverflow();
+                            imu->gDataOverflow() | 
+                            imu->mDataOverflow();
 
         if (overflow)
         {
@@ -114,43 +141,117 @@ int main()
         imu->readTemp();
 
         // Print the unscaled 16-bit signed values.
-        cout<<"-------------------------------------"<<endl;
-        cout<<"Gyro x: "<<imu->gx<<endl;
-        cout<<"Gyro y: "<<imu->gy<<endl;
-        cout<<"Gyro z: "<<imu->gz<<endl;
-        cout<<"Accel x: "<<imu->ax<<endl;
-        cout<<"Accel y: "<<imu->ay<<endl;
-        cout<<"Accel z: "<<imu->az<<endl;
-        cout<<"Mag x: "<<imu->mx<<endl;
-        cout<<"Mag y: "<<imu->my<<endl;
-        cout<<"Mag z: "<<imu->mz<<endl;
-        cout<<"Temp: "<<imu->temperature<<endl;
-        cout<<"-------------------------------------"<<endl;
+        // cout<<"-------------------------------------"<<endl;
+        // cout<<"Gyro x: "<<imu->gx<<endl;
+        // cout<<"Gyro y: "<<imu->gy<<endl;
+        // cout<<"Gyro z: "<<imu->gz<<endl;
+        // cout<<"Accel x: "<<imu->ax<<endl;
+        // cout<<"Accel y: "<<imu->ay<<endl;
+        // cout<<"Accel z: "<<imu->az<<endl;
+        // cout<<"Mag x: "<<imu->mx<<endl;
+        // cout<<"Mag y: "<<imu->my<<endl;
+        // cout<<"Mag z: "<<imu->mz<<endl;
+        // cout<<"Temp: "<<imu->temperature<<endl;
+        // cout<<"-------------------------------------"<<endl;
 
         // Print the "real" values in more human comprehensible units.
-        cout<<"-------------------------------------"<<endl;
-        cout<<"Gyro x: "<<imu->calcGyro(imu->gx)<<" deg/s"<<endl;
-        cout<<"Gyro y: "<<imu->calcGyro(imu->gy)<<" deg/s"<<endl;
-        cout<<"Gyro z: "<<imu->calcGyro(imu->gz)<<" deg/s"<<endl;
-        cout<<"Accel x: "<<imu->calcAccel(imu->ax)<<" g"<<endl;
-        cout<<"Accel y: "<<imu->calcAccel(imu->ay)<<" g"<<endl;
-        cout<<"Accel z: "<<imu->calcAccel(imu->az)<<" g"<<endl;
-        cout<<"Mag x: "<<imu->calcMag(imu->mx)<<" Gauss"<<endl;
-        cout<<"Mag y: "<<imu->calcMag(imu->my)<<" Gauss"<<endl;
-        cout<<"Mag z: "<<imu->calcMag(imu->mz)<<" Gauss"<<endl;
+
+        float acceX = imu->calcAccel(imu->ax);
+        float acceY = imu->calcAccel(imu->ay);
+        float acceZ = imu->calcAccel(imu->az);
+        gyroX = imu->calcGyro(imu->gx);
+        gyroY = imu->calcGyro(imu->gy);
+        gyroZ = imu->calcGyro(imu->gz);
+
+        //cout<<"-------------------------------------"<<endl;
+        // cout<<"Gyro x: "  << gyroX << endl;
+        // cout<<"Gyro y: "  << gyroY << endl;
+        // cout<<"Gyro z: "  << gyroZ << endl;
+
+        // cout<<"Accel x: " << acceX <<" g" << endl;
+        // cout<<"Accel y: " << acceY <<" g" << endl;
+        // cout<<"Accel z: " << acceZ <<" g" << endl;
+        
+        float thetaX = atan2 (acceY, sqrt(acceX*acceX + acceZ*acceZ)) * 180 / PI;
+        float thetaY = atan2 (acceZ, sqrt(acceY*acceY + acceX*acceX)) * 180 / PI;
+        float thetaZ = atan2 (acceX, sqrt(acceZ*acceZ + acceY*acceY)) * 180 / PI;
+        angleX = 0.98 * (angleX + gyroX * TIME * 5) + 0.02 * (thetaX);
+        angleY = 0.98 * (angleY + gyroY * TIME * 5) + 0.02 * (thetaY);
+        angleZ = 0.98 * (angleX + gyroZ * TIME * 5) + 0.02 * (thetaZ);
+
+        if (dt++ == 5){
+            switch(getMotion(angleX, angleY, angleZ, prev_angleX, prev_angleY, prev_angleZ)) {
+                case SIT: {
+                    cout << "                                SIT" << endl;
+                    break;
+                }
+                case STAND: {
+                    cout << "                                STAND" << endl;
+                    break;
+                }
+                case WALK: {
+                    cout << "                                WALk" << endl;
+                    break;
+                }
+                default: {}
+            }
+            cout<<"-------------------------------------"<<endl;
+            cout << "angle X = " << angleX << endl;
+            cout << "angle Y = " << angleY << endl;
+            cout << "angle Z = " << angleZ << endl;
+
+            dt = 0;
+        }
+        
+        // cout<<"Mag x: "<<imu->calcMag(imu->mx)<<" Gauss"<<endl;
+        // cout<<"Mag y: "<<imu->calcMag(imu->my)<<" Gauss"<<endl;
+        // cout<<"Mag z: "<<imu->calcMag(imu->mz)<<" Gauss"<<endl;
         // Temp conversion is left as an example to the reader, as it requires a
         //    good deal of device- and system-specific calibration. The on-board
         //    temp sensor is probably best not used if local temp data is required!
-        cout<<"-------------------------------------"<<endl;
-        usleep(500*1000);
+        // cout<<"-------------------------------------"<<endl;
+
+        usleep(usleep_time);
     }
 
 	return MRAA_SUCCESS;
 }
 
 
+bool        diff(float number, float range) {
+    if (  number - (range - DELTA) - EPSILON >= 0
+       && (range + DELTA) - number - EPSILON >= 0)
+       return true;
+    else
+        return false;
+}
+
+float delta(float cur, float prev) {
+    return cur - prev;
+}
 
 // **************************************************************
-enum MOTION getMotion() {
+enum MOTION getMotion(float X, float Y, float Z, float Xp, float Yp, float Zp) {
+    // SIT
+    if (diff(Y, 83) && diff(X, 0) && diff(Z, 0)
+        && delta(Y, Yp) <= GAMMA && delta(X, Xp) <= GAMMA && delta(X, Xp) <= GAMMA)
+        return SIT;
+
+    // SIT
+    if (diff(Y, 0) && diff(X, 0) && diff(Z, 0)
+        && delta(Y, Yp) <= GAMMA && delta(X, Xp) <= GAMMA && delta(X, Xp) <= GAMMA)
+        return STAND;
+
+    // case 1 of WALK
+    // if ((diff(Y, 10) || diff(Y, -10)) && diff(X, 0) && diff(Z, 0)
+    //     && delta(Y, Yp) >= GAMMA*2 && delta(X, Xp) >= GAMMA*2 && delta(X, Xp) >= GAMMA*2)
+    //     return WALK;
+
+    // case 2 of WALK
+    if (gyroY >= 200 || gyroY <= -200)
+        return WALK;
+
     
+    return STILL;
+
 }
