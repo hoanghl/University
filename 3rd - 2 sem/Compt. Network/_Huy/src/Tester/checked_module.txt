@@ -1,0 +1,13 @@
+Method access in class Processing is one among advanced invention in this project.
+The problem here is that the Main thread and Processing thread both do something with the queue but different actions.
+Main thread adds Datagram packet to Queue
+Processing thread remove item from it
+Both must avoid race condition
+=> "access" methods is created to serve them all.
+Main thread uses        flag 1, parameter Datagram packet, return null
+Processing thread uses  flag 0, parameter null,            return Datagram packet
+
+1.Packet
+    - toBytes
+    - getPacketFromClient
+    -
