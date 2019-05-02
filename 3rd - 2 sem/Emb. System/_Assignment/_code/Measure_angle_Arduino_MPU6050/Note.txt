@@ -1,0 +1,31 @@
+Thông tin:
+(1) - nằm ngang, LCD hướng lên     : AcceX:  -0.08; AcceY:  +0.01; AcceZ: +0.95
+(2) - nằm ngang, LCD hướng xuống   : AcceX:  -0.08; AcceY:  -0.00; AcceZ: -1.00
+(3) - nằm dọc,   LCD hướng ra xa   : AcceX:  -0.10; AcceY:  -0.90; AcceZ: -0.03
+(4) - nằm dọc,   LCD hướng về mình : AcceX:  -0.09; AcceY:  +0.90; AcceZ: -0.10
+(5) - nằm dọc,   LCD hướng qua trái: AcceX:  +0.90; AcceY:  -0.10; AcceZ: +0.02
+(6) - Nằm dọc,   LCD hướng qua phải: AcceX:  -1.00; AcceY:  +0.02; AcceZ: -0.05
+
+- Chuyển động: LCD ban đầu đang hướng lên
+
+Quy ước vị trí của cảm biến:
+- ngồi: (1)
+- đứng: (6)
+- đi  : ~(6)
+- chạy: ~~(6)
+
+**** Test Gyro
+Default direction: LCD up, Wire in the left
+Ox: big finger
+Oy: 2nd
+Oz: middle finger
+
+1. Ox:
+- xoay LCD ra ngoài lap: Ox : -244
+- xoay LCD ra phía mình: Ox : +244
+2. Oy:
+- xoay LCD sang phải: Oy : +245
+- xoay LCD sang trái: Oy : -245
+3. Oz:
+- xoay dây sang phải, xuống dưới: Oz = +245
+- xoay dây sang trái, lên trên:   Oz = +245

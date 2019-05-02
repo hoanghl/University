@@ -1,0 +1,13 @@
+A. Implement LCD and Button
+    1. Implement Button to start/stop counting
+    2. Implement LCD to display on LCD
+
+B. Implement algorithm
+    1. implement "capture value every 100ms"
+    2. Implement main algorithm
+        a, p: array of float: 5000 elements
+        n: increase every counting
+        D, step, total: int number
+
+C. 
+    1. Implement program as service to run in background
