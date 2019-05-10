@@ -3,9 +3,9 @@
 
 void    init_LCDButton();
 bool    isButAPressed();
-void    printLCD_1();
-void    printLCD_2();
-void    printLCD_3();
+void    printLCD_1();           // print as St_STOP
+void    printLCD_2();           // print as St_RUN
+void    printLCD_3();           // print as St_CALCULATE
 
 
 #endif
