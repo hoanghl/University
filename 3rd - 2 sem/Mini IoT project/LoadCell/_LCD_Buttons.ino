@@ -97,43 +97,41 @@ void LCD_Button_setup ()
     lcd.begin(16,2);
     lcd.init();
     lcd.backlight();
-
 }
 
 void Greeting() {
+    lcd.clear();
     lcd.setCursor(2, 0);            
     lcd.print("SMART_SCALE");
     lcd.setCursor(4, 1);            
     lcd.print("WELCOME!");
 
+    setTimer(3);
+    startTimer();
+
     prev_state = St_Greeting;
     state = St_Wait;
-    setTimer(5);
-    startTimer();
+
 }
 
-
-
-
 void printCalib_doing() {
+    lcd.clear();
     lcd.setCursor(2, 0);
     lcd.print("Calibrating");
     lcd.setCursor(6, 1);
     lcd.print("...");
 }
 void printCalib_done() {
+    lcd.clear();
     lcd.setCursor(2, 0);            
     lcd.print("Calibration");
     lcd.setCursor(4, 1);
     lcd.print("Complete");
 }
 
-
-
-
 void ViewMode1 ()
 {
-    lcd.begin(16,2);
+    lcd.clear();
     lcd.setCursor(0,0); 
     lcd.print("Weight:");
     lcd.setCursor(8,0); 
@@ -144,7 +142,7 @@ void ViewMode1 ()
 
 void ViewMode2 ()
 {
-    lcd.begin(16,2);
+    lcd.clear();
     lcd.setCursor(0,0); 
     lcd.print("Count:");
     lcd.setCursor(7,0); 
@@ -193,7 +191,7 @@ void processView (int &a)
 
 void printSpeed (int Speed)
 {
-    lcd.begin(16,2);
+    lcd.clear();
     lcd.setCursor(3,0);
 
     switch (Speed)
@@ -239,17 +237,17 @@ void StartStop ()
     isStarted = !isStarted;
     if (isStarted == false)
     {
-        lcd.begin(16,2);
-          lcd.setCursor(4,0); 
-          lcd.print("STOPPED");
-          lcd.setCursor(3,1); 
-          lcd.print('|');
-          lcd.setCursor(7,1); 
-          lcd.print('|');
-          lcd.setCursor(11,1); 
-          lcd.print('|');
-          lcd.setCursor(15,1); 
-          lcd.print('|');
+        lcd.clear();
+        lcd.setCursor(4,0); 
+        lcd.print("STOPPED");
+        lcd.setCursor(3,1); 
+        lcd.print('|');
+        lcd.setCursor(7,1); 
+        lcd.print('|');
+        lcd.setCursor(11,1); 
+        lcd.print('|');
+        lcd.setCursor(15,1); 
+        lcd.print('|');
     }
     else
     {
@@ -261,7 +259,7 @@ void SpeedUp ()
 {
     if (isStarted == false)        // check nếu động cơ chưa Start thì ko speed up
     {    
-        lcd.begin(16,2);
+        lcd.clear();
         lcd.setCursor(1,0); 
         lcd.print("Engine Has Not");
         lcd.setCursor(2,1); 
@@ -270,38 +268,38 @@ void SpeedUp ()
     else
     {
         
-      if (Speed == Lv4)
-      {
-          lcd.begin(16,2);
-          lcd.setCursor(1,0); 
-          lcd.print("Top-SPEED: 4/4");
-          lcd.setCursor(0,1); 
-          lcd.print("################");
-          lcd.setCursor(3,1); 
-          lcd.print('|');
-          lcd.setCursor(7,1); 
-          lcd.print('|');
-          lcd.setCursor(11,1); 
-          lcd.print('|');
-          lcd.setCursor(15,1); 
-          lcd.print('|');
-      }
-      else
-      {
-          if (Speed == Lv1)
-          {
+        if (Speed == Lv4)
+        {
+            lcd.clear();
+            lcd.setCursor(1,0); 
+            lcd.print("Top-SPEED: 4/4");
+            lcd.setCursor(0,1); 
+            lcd.print("################");
+            lcd.setCursor(3,1); 
+            lcd.print('|');
+            lcd.setCursor(7,1); 
+            lcd.print('|');
+            lcd.setCursor(11,1); 
+            lcd.print('|');
+            lcd.setCursor(15,1); 
+            lcd.print('|');
+        }
+        else
+        {
+            if (Speed == Lv1)
+            {
             Speed = Lv2;
-          }
-          else if (Speed == Lv2)
-          {
+            }
+            else if (Speed == Lv2)
+            {
             Speed = Lv3;
-          }
-          else if (Speed == Lv3)
-          {
+            }
+            else if (Speed == Lv3)
+            {
             Speed = Lv4;
-          }
-          printSpeed (Speed);        
-      }
+            }
+            printSpeed (Speed);        
+        }
     }
 }
 
@@ -309,7 +307,7 @@ void SpeedDown ()
 { 
     if (isStarted == false)        // check nếu động cơ chưa Start thì ko speed down
     {    
-        lcd.begin(16,2);
+        lcd.clear();
         lcd.setCursor(1,0); 
         lcd.print("Engine Has Not");
         lcd.setCursor(2,1); 
@@ -318,38 +316,38 @@ void SpeedDown ()
     else
     {
         
-      if (Speed == Lv1)
-      {
-          lcd.begin(16,2);
-          lcd.setCursor(1,0); 
-          lcd.print("Min-SPEED: 1/4");
-          lcd.setCursor(0,1); 
-          lcd.print("####");
-          lcd.setCursor(3,1); 
-          lcd.print('|');
-          lcd.setCursor(7,1); 
-          lcd.print('|');
-          lcd.setCursor(11,1); 
-          lcd.print('|');
-          lcd.setCursor(15,1); 
-          lcd.print('|');
-      }
-      else
-      {
-          if (Speed == Lv4)
-          {
+        if (Speed == Lv1)
+        {
+            lcd.clear();
+            lcd.setCursor(1,0); 
+            lcd.print("Min-SPEED: 1/4");
+            lcd.setCursor(0,1); 
+            lcd.print("####");
+            lcd.setCursor(3,1); 
+            lcd.print('|');
+            lcd.setCursor(7,1); 
+            lcd.print('|');
+            lcd.setCursor(11,1); 
+            lcd.print('|');
+            lcd.setCursor(15,1); 
+            lcd.print('|');
+        }
+        else
+        {
+            if (Speed == Lv4)
+            {
             Speed = Lv3;
-          }
-          else if (Speed == Lv3)
-          {
+            }
+            else if (Speed == Lv3)
+            {
             Speed = Lv2;
-          }
-          else if (Speed == Lv2)
-          {
+            }
+            else if (Speed == Lv2)
+            {
             Speed = Lv1;
-          }
-          printSpeed (Speed);        
-      }
+            }
+            printSpeed (Speed);        
+        }
     }
 }
 
@@ -357,7 +355,7 @@ void Reset ()
 {
     n_apples = 0;
 
-    lcd.begin(16,2);
+    lcd.clear();
     lcd.setCursor(6,0); 
     lcd.print("Reset");
     lcd.setCursor(0,1); 

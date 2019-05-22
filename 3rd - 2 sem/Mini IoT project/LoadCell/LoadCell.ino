@@ -11,12 +11,12 @@ void setup() {
     Serial.println("Start setting up");
     // set up components
     EEPROM_setup();
-    LoadCell_setup();
+    //LoadCell_setup();
     Serial.println("LoadCell set up done");
-    Connection_setup();
+    //Connection_setup();
     Serial.println("Connection set up done");    
     LCD_Button_setup();
-    Serial.println("all done");
+    Serial.println("All done");
 
     // init state
     state       = St_Calibrate;
@@ -30,11 +30,12 @@ void setup() {
 void loop() {
     switch (state) {
         case St_Greeting: {
+            Serial.println("on St_Greeting");
             Greeting();
             break;
         }
         case St_Calibrate: {
-            //Serial.println("on St_Calibrate");
+            Serial.println("on St_Calibrate");
             Calibrate();
             break;
         }
@@ -54,7 +55,7 @@ void loop() {
             break;
         }
         case St_LCD_Button: {
-            // Serial.println("on LCD");
+            Serial.println("on LCD");
             LCD_Button();
             break;
         }

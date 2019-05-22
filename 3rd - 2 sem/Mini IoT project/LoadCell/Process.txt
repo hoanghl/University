@@ -1,4 +1,4 @@
 The errors remain:
-    LCD sometime "##" not show correctly
+    LCD sometime "##" not show correctly --SOLVED
     St_Greeting not shown
-    Button sometime not recognized
+    Button sometime not recognized --SOLVED
