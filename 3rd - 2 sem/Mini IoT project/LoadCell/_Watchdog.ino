@@ -10,5 +10,5 @@ void ISRWatchdog(){
     Serial.println();
     Serial.println("Watchdog bite, resetting....");
     ESP.reset();
-  }
-}
+  };
+};
