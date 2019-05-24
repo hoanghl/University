@@ -7,7 +7,7 @@
 
 void setup() {
     Serial.begin(57600);
-
+  
     Serial.println("Start setting up");
     // set up components
     EEPROM_setup();
@@ -16,6 +16,9 @@ void setup() {
     Connection_setup();
     Serial.println("Connection set up done");    
     LCD_Button_setup();
+    sTick.attach(1,ISRWatchdog);
+    //Setting up watchdog ISR
+    Serial.println("Watchdog set up done");
     Serial.println("All done");
 
     // init state
@@ -28,9 +31,16 @@ void setup() {
 
 
 void loop() {
+/*
     Serial.println(state);
     Serial.println(sub_state);
     Serial.println(prev_state);
+*/
+    
+    wd_count = 0;
+    //reset the watchdog timer
+    
+
     switch (state) {
         case St_Greeting: {
             Serial.println("on St_Greeting");
