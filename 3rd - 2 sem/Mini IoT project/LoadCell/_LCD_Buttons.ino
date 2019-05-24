@@ -111,7 +111,6 @@ void Greeting() {
 
     prev_state = St_Greeting;
     state = St_Wait;
-
 }
 
 void printCalib_doing() {

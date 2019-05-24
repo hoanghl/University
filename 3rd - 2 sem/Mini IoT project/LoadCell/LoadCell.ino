@@ -13,21 +13,24 @@ void setup() {
     EEPROM_setup();
     //LoadCell_setup();
     Serial.println("LoadCell set up done");
-    //Connection_setup();
+    Connection_setup();
     Serial.println("Connection set up done");    
     LCD_Button_setup();
     Serial.println("All done");
 
     // init state
-    state       = St_Calibrate;
+    state       = St_Greeting;
     sub_state   = st_calib_noload;
-
+    
     // set up watchdog 1s
     // 5ph k can --> sleep
 }
 
 
 void loop() {
+    Serial.println(state);
+    Serial.println(sub_state);
+    Serial.println(prev_state);
     switch (state) {
         case St_Greeting: {
             Serial.println("on St_Greeting");
