@@ -3,7 +3,6 @@
 // the inner one loops inside each Big state
 
 #include "General_Resources.hpp"
-           
 
 void setup() {
     Serial.begin(57600);
