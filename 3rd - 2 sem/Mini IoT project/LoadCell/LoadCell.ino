@@ -3,11 +3,14 @@
 // the inner one loops inside each Big state
 
 #include "General_Resources.hpp"
-           
+
+#include <Ticker.h>
+
+volatile int wd_count = 0;
+Ticker sTick;
 
 void setup() {
     Serial.begin(57600);
-  
     Serial.println("Start setting up");
     // set up components
     EEPROM_setup();
